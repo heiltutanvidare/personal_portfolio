@@ -1,0 +1,35 @@
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid var(--clr-tint);
+  padding: 5rem 2rem;
+  text-align: center;
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+
+.inner {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footerPart {
+  margin-bottom: 2em;
+  text-align-last: left;
+}
+
+.footer h4 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-xsm);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer a {
+  font-size: var(--fs-sm);
+}

@@ -1,0 +1,29 @@
+.contact {
+  display: grid;
+}
+
+@media screen and (min-width: 960px) {
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact h4 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-xsm);
+  margin: 0 0 0.5em 0;
+  line-height: 1;
+}
+
+.contactItem {
+  margin-bottom: 2em;
+}
+
+.contactItem:last-of-type {
+  margin-top: 4em;
+}
+
+.contactImg {
+  height: 100%;
+  border: 1px solid var(--clr-tint);
+}

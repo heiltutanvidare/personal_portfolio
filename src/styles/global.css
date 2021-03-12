@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Mono:wght@400&display=swap");
+
+:root {
+  /* Colors */
+  --clr-dark: #14181a;
+  --clr-tint: #2c353a;
+  --clr-light: #f3f5f6;
+  --clr-light-shade: #b7c1c8;
+  --clr-heart: #ff00d4;
+
+  /* Font family */
+  --ff-main: "Open Sans", sans-serif;
+  --ff-secondary: "Roboto Mono", monospace;
+
+  /* Font sizes */
+  --fs-xsm: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 3rem;
+  --fs-ultra: 5rem;
+
+  /* Border radiusesesesssesss */
+  --br-xsm: 2px;
+  --br-sm: 4px;
+  --br-base: 8px;
+  --br-md: 12px;
+  --br-lg: 24px;
+  --br-xl: 36px;
+
+  /* Breakpoints */
+  --bp-xl: 1824px;
+  --bp-lg: 1224px;
+  --bp-md: 1024px;
+  --bp-sm: 768px;
+  --bp-xsm: 640px;
+  --bp-mini: 321px;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 1rem 0 0 0;
+  font-family: var(--ff-main);
+  line-height: 1.618;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  position: relative;
+}
+
+.layout {
+  padding-left: 12rem;
+  padding-right: 4rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--clr-light-shade);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.125s linear;
+}
+
+a:hover {
+  color: var(--clr-light);
+}
+
+.btn {
+  padding: 0.75em 1.5em;
+  border: 1px solid var(--clr-light);
+  font-family: var(--ff-secondary);
+}

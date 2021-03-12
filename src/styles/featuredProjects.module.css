@@ -1,0 +1,48 @@
+.featured header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.featured header a,
+.featured header h2 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-sm);
+}
+
+.projectContainer {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.projectCard img {
+  background-color: var(--clr-tint);
+  background: radial-gradient(var(--clr-tint), var(--clr-dark));
+  filter: grayscale(100%);
+  transition: all 0.25s linear;
+}
+
+.projectCard:hover img {
+  transition: all 0.25s linear;
+  filter: grayscale(0%);
+}
+
+.projectCard:first-child {
+  grid-column: 1 / -1;
+}
+
+.projectCard .title {
+  border-bottom: 5px solid var(--clr-light);
+  font-size: var(--fs-xl);
+  width: max-content;
+  padding-bottom: 0.25em;
+  margin: 0 0 2em 0;
+}
+
+.projectCard .tagline {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-sm);
+  margin: 1em 0;
+}

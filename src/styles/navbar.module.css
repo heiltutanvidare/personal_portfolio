@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-sm);
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.navbar a {
+  padding: 0.5em;
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+.navbar a:last-of-type {
+  padding-right: 0;
+  margin-right: 0;
+}
