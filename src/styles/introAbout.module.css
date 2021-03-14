@@ -9,3 +9,10 @@
 .introAbout p {
   font-size: var(--fs-xl);
 }
+
+@media screen and (max-width: 768px) {
+  .introAbout p {
+    font-size: var(--fs-lg);
+    margin-bottom: 2em;
+  }
+}
