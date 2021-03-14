@@ -41,7 +41,7 @@
   margin: 0 0 2em 0;
 }
 
-.projectCard .tagline {
+.projectCard .type {
   font-family: var(--ff-secondary);
   font-size: var(--fs-sm);
   margin: 1em 0;

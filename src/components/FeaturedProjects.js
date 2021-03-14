@@ -5,7 +5,7 @@ import {
   featured,
   projectContainer,
   projectCard,
-  tagline,
+  type,
   title,
 } from "../styles/featuredProjects.module.css"
 
@@ -14,17 +14,18 @@ export default function FeaturedProjects() {
     <StaticQuery
       query={graphql`
         {
-          allStrapiProject(filter: { featured: { eq: true } }) {
+          allStrapiProject(
+            filter: { featured: { eq: true } }
+            sort: { fields: strapiId, order: DESC }
+          ) {
             edges {
               node {
-                featured
                 slug
                 cover {
                   childImageSharp {
                     gatsbyImageData(formats: AUTO, placeholder: BLURRED)
                   }
                 }
-                tagline
                 title
                 type
                 strapiId
@@ -50,7 +51,7 @@ export default function FeaturedProjects() {
                   image={getImage(project.node.cover)}
                   alt={project.node.title}
                 />
-                <p className={tagline}>{project.node.tagline}</p>
+                <p className={type}>{project.node.type}</p>
                 <h2 className={title}>{project.node.title}</h2>
               </Link>
             ))}

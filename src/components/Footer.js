@@ -6,6 +6,9 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
+        <div className={styles.watermark}>
+          <img src="logo_white.svg" alt="logo watermark" />
+        </div>
         <div className={styles.footerPart}>
           <h4>Navigation</h4>
           <div className={styles.links}>

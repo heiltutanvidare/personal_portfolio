@@ -2,7 +2,6 @@
   margin-top: 5rem;
   border-top: 1px solid var(--clr-tint);
   padding: 5rem 2rem;
-  text-align: center;
   margin-left: -4rem;
   margin-right: -4rem;
 }
@@ -11,7 +10,50 @@
   max-width: 90%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  position: relative;
+  padding: 4rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .inner {
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .watermark {
+    bottom: 0;
+  }
+
+  .watermark img {
+    max-height: 15rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0.02;
+  z-index: -1;
+}
+
+.watermark img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .footerPart {
