@@ -6,7 +6,7 @@
   --clr-tint: #2c353a;
   --clr-light: #f3f5f6;
   --clr-light-shade: #b7c1c8;
-  --clr-heart: #ff00d4;
+  --clr-heart: #940079;
 
   /* Font family */
   --ff-main: "Open Sans", sans-serif;
@@ -17,6 +17,7 @@
   --fs-sm: 0.875rem;
   --fs-base: 1rem;
   --fs-md: 1.125rem;
+  --fs-lg: 1.5rem;
   --fs-xl: 2rem;
   --fs-xxl: 3rem;
   --fs-ultra: 5rem;
@@ -43,6 +44,18 @@ html {
   font-size: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -64,6 +77,13 @@ body {
   padding-right: 4rem;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .layout {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 a {

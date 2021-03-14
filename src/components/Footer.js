@@ -1,8 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
+import { useContactData } from "../hooks/use-contact-data"
 import * as styles from "../styles/footer.module.css"
 
 function Footer() {
+  const { email, github, instagram, linkedin, phone } = useContactData()
+
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -21,23 +24,38 @@ function Footer() {
         <div className={styles.footerPart}>
           <h4>Contact</h4>
           <div className={styles.links}>
-            <a href="mailto:vusvol@icloud.com">vusvol@icloud.com</a>
-            <a href="tel:91607947">916 07 947</a>
+            <a href={`mailto:${email}`}>{email}</a>
+            <a href={`tel:${phone}`}>{phone}</a>
           </div>
         </div>
         <div className={styles.footerPart}>
           <h4>SoMe</h4>
           <div className={styles.links}>
-            <a href="mailto:vusvol@icloud.com">GitHub</a>
-            <a href="mailto:vusvol@icloud.com">LinkedIn</a>
-            <a href="tel:91607947">Instagram</a>
+            <a href={`https://www.${github}`} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a
+              href={`https://www.${linkedin}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
+              href={`https://www.${instagram}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
           </div>
         </div>
         <div className={styles.footerPart}>
           <h4>Målet mitt</h4>
           <p className="footer__goal">
-            Fortelje historier, informere lesarane, gjere dei klokare, og meir
-            engasjerte – med teknologi og design som verkemiddel.
+            Å bidra til å kunne fortelje historier, informere lesarane, gjere
+            dei klokare, og meir engasjerte – med teknologi og design som
+            verkemiddel.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react"
-import { header } from "../styles/header.module.css"
 import { Link } from "gatsby"
+import { header } from "../styles/header.module.css"
 
 export default function Header() {
   return (

@@ -9,12 +9,24 @@
   max-width: 30ch;
 }
 
+@media screen and (max-width: 767px) {
+  .hero h1 {
+    font-size: var(--fs-xl);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero h1 {
+    font-size: var(--fs-lg);
+  }
+}
+
 .hero p {
   font-family: var(--ff-secondary);
   font-size: var(--fs-sm);
   color: var(--clr-light-shade);
   margin: 0;
-  line-height: 1;
+  line-height: 1.618;
 }
 
 .hero h1 span {

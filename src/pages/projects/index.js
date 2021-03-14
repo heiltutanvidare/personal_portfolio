@@ -12,7 +12,13 @@ export default function Project({ data }) {
   return (
     <Layout>
       <Hero>
-        <h1>Projects in which Vidar has been involved in recent years.</h1>
+        <p>
+          <em>
+            – Find a job you enjoy doing, and you will never have to work a day
+            in your life.
+          </em>
+        </p>
+        <h1>Prosjekt eg har arbeidd med dei siste åra</h1>
       </Hero>
       <div className={projectsContainer}>
         {projects.map(project => (

@@ -24,3 +24,9 @@
   margin-bottom: 6rem;
   color: var(--clr-light-shade);
 }
+
+@media screen and (max-width: 767px) {
+  .header {
+    display: none;
+  }
+}

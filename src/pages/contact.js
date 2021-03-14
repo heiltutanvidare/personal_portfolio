@@ -1,6 +1,7 @@
+import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import React from "react"
+import { useContactData } from "../hooks/use-contact-data"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import * as styles from "../styles/contact.module.css"
@@ -8,13 +9,7 @@ import * as styles from "../styles/contact.module.css"
 export default function Contact({ data }) {
   const image = getImage(data.allStrapiContact.nodes[0].contact_photo)
 
-  const {
-    email,
-    github,
-    instagram,
-    linkedin,
-    phone,
-  } = data.allStrapiContact.nodes[0]
+  const { email, github, instagram, linkedin, phone } = useContactData()
 
   return (
     <Layout>
@@ -77,11 +72,6 @@ export const query = graphql`
   {
     allStrapiContact {
       nodes {
-        email
-        github
-        instagram
-        linkedin
-        phone
         contact_photo {
           childImageSharp {
             gatsbyImageData(
