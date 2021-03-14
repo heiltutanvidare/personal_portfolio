@@ -30,3 +30,27 @@
     display: none;
   }
 }
+
+.hamburger {
+  height: 1.25rem;
+  width: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--clr-light-shade);
+  transition: 0.125s linear;
+}
+
+.hamburger span:nth-child(2) {
+  transform: translateY(25%);
+}
+
+.hamburger:hover span {
+  background-color: var(--clr-light);
+}
