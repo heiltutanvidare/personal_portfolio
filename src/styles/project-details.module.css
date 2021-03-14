@@ -38,6 +38,7 @@
 .details h3 {
   font-family: var(--ff-secondary);
   font-size: var(--fs-sm);
+  margin-bottom: 1.25em;
 }
 
 .coverImg {

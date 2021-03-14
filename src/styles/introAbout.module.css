@@ -4,10 +4,12 @@
 .introAbout h2 {
   font-family: var(--ff-secondary);
   font-size: var(--fs-sm);
+  margin-bottom: 0.75em;
 }
 
 .introAbout p {
   font-size: var(--fs-xl);
+  margin-bottom: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
