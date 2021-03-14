@@ -1,0 +1,25 @@
+.skills {
+  margin-top: 2em;
+}
+
+.skills h3 {
+  font-size: var(--fs-base);
+  font-family: var(--ff-secondary);
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+.skillsContainer li {
+  color: var(--clr-light-shade);
+  margin-right: 2em;
+  margin-bottom: 2em;
+  list-style: none;
+  padding: 0;
+  padding-right: 2em;
+  border-right: 1px solid var(--clr-tint);
+}

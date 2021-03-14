@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Bio from "../components/Bio"
 import CurricumVitae from "../components/CurricumVitae"
+import Skills from "../components/Skills"
 
 export default function About() {
   return (
@@ -15,6 +16,7 @@ export default function About() {
       </Hero>
       <Bio />
       <CurricumVitae />
+      <Skills />
     </Layout>
   )
 }
