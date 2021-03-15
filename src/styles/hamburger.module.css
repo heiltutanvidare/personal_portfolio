@@ -1,0 +1,36 @@
+.hamburger {
+  width: 1.5rem;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2000;
+}
+
+.hamburger.open {
+  display: unset;
+  z-index: 3000;
+}
+
+.line {
+  height: 3px;
+  background-color: var(--clr-light);
+  transition: all 0.125s ease;
+}
+
+.hamburger.open .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.hamburger.open .line01 {
+  transform: rotate(45deg);
+}
+
+.hamburger.open .line02 {
+  transform: rotate(-45deg);
+}

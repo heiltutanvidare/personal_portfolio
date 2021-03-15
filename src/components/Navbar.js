@@ -1,12 +1,20 @@
 import React from "react"
-import { navbar } from "../styles/navbar.module.css"
+import * as styles from "../styles/navbar.module.css"
+import MainLogo from "../components/MainLogo"
 import { Link } from "gatsby"
+import Hamburger from "./Hamburger"
 
-export default function Navbar() {
+export default function Navbar({ toggleNav, navOpen }) {
   return (
-    <nav className={navbar}>
-      <Link to="/">Vidar Håland</Link>
-      <div>
+    <nav className={styles.navbar}>
+      <MainLogo />
+      <Link to="/" className={styles.name}>
+        Vidar Håland
+      </Link>
+      {/* <Hamburger toggleNav={toggleNav} navOpen={navOpen} /> */}
+      <div
+        className={`${styles.navLinks} ${navOpen === true ? styles.open : ""}`}
+      >
         <Link to="/">Heim</Link>
         <Link to="/projects">Prosjekt</Link>
         <Link to="/about">Om meg</Link>
@@ -15,3 +23,5 @@ export default function Navbar() {
     </nav>
   )
 }
+
+// `${navOpen === true ? styles.open : ""}`

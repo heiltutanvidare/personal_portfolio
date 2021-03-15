@@ -1,18 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
 import * as styles from "../styles/header.module.css"
+import Hamburger from "./Hamburger"
 
-export default function Header() {
+export default function Header({ toggleNav, navOpen }) {
   return (
     <header className={styles.header}>
-      <Link to="/">
-        <img src="/logo_white.svg" alt="Vidar Håland logo" />
-      </Link>
-      <div className={styles.hamburger}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div className={styles.logoPlaceholder}></div>
+      <Hamburger toggleNav={toggleNav} navOpen={navOpen} />
       <p>
         Frontend-utviklar <br />& redaksjonell designer
       </p>

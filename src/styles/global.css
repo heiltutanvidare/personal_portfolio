@@ -3,6 +3,7 @@
 :root {
   /* Colors */
   --clr-dark: #14181a;
+  --clr-dark-shadow: #14181a27;
   --clr-tint: #2c353a;
   --clr-light: #f3f5f6;
   --clr-light-shade: #b7c1c8;
@@ -153,6 +154,7 @@ body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   position: relative;
+  overflow-x: hidden;
 }
 
 .layout {

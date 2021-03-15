@@ -4,6 +4,7 @@
   border-right: 1px solid var(--clr-tint);
   height: 100vh;
   position: fixed;
+  z-index: 6000;
   left: 0;
   top: 0;
   bottom: 0;
@@ -13,8 +14,9 @@
   align-items: center;
 }
 
-.header img {
+.logoPlaceholder {
   width: 1.6rem;
+  height: 1.6rem;
 }
 
 .header p {
