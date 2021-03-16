@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import "../styles/global.css"
-import Footer from "./Footer"
-import Header from "./Header"
 import Navbar from "./Navbar"
+import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Layout({ children }) {
   // Toggle nav menu

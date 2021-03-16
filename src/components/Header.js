@@ -6,7 +6,6 @@ export default function Header({ toggleNav, navOpen }) {
   return (
     <header className={styles.header}>
       <div className={styles.logoPlaceholder}></div>
-      <Hamburger toggleNav={toggleNav} navOpen={navOpen} />
       <p>
         Frontend-utviklar <br />& redaksjonell designer
       </p>
