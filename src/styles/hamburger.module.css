@@ -5,7 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  z-index: 2000;
+  cursor: pointer;
+}
+
+.hamburger:focus {
+  outline: none;
 }
 
 .hamburger.open {

@@ -10,7 +10,7 @@
 }
 
 .bio p + p {
-  margin-top: 2em;
+  margin-top: 1rem;
 }
 
 .bio li {
@@ -28,19 +28,44 @@
 
 .grid {
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 1em;
 }
 
 .bio .btn {
   grid-column: 1 / -1;
 }
 
+figcaption {
+  text-align: center;
+}
+
 @media screen and (min-width: 999px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    grid-gap: 0 3em;
   }
 
+  .bioText {
+    font-size: var(--fs-base);
+  }
+
+  .bioText ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .bioText ul li {
+    margin: 0 0.5em 0.125em 0;
+  }
+
+  figcaption {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .bioText {
     font-size: var(--fs-md);
   }

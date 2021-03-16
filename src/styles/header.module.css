@@ -4,19 +4,15 @@
   border-right: 1px solid var(--clr-tint);
   height: 100vh;
   position: fixed;
-  z-index: 6000;
   left: 0;
   top: 0;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-}
-
-.logoPlaceholder {
-  width: 1.6rem;
-  height: 1.6rem;
+  z-index: 2000;
+  pointer-events: none;
 }
 
 .header p {
@@ -31,28 +27,4 @@
   .header {
     display: none;
   }
-}
-
-.hamburger {
-  height: 1.25rem;
-  width: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background-color: var(--clr-light-shade);
-  transition: 0.125s linear;
-}
-
-.hamburger span:nth-child(2) {
-  transform: translateY(25%);
-}
-
-.hamburger:hover span {
-  background-color: var(--clr-light);
 }

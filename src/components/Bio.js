@@ -21,11 +21,8 @@ function Bio() {
           <p>
             Eg har bakgrunn som designer i lokalavisa Kvinnheringen, der eg
             etter 12 fantastiske år tok valet om å slutta i jobben for å satse
-            på ei digital framtid.
-          </p>
-          <p>
-            Første steget på den nye vegen vart difor studiet
-            «FrontEnd-utvikling».
+            på ei digital framtid. Første steget på den nye vegen vart difor
+            studiet «FrontEnd-utvikling».
           </p>
           <p>
             Samarbeidet med den dyktige redaksjonen i Kvinnheringen gav grobotn
@@ -52,10 +49,10 @@ function Bio() {
               Prosjektrapportar
             </li>
             <li>
-              <span role="img" aria-label="beer glasses emoji">
+              <span role="img" aria-label="Beer glasses emoji">
                 🍻
               </span>{" "}
-              Øl-etikettar
+              Etikettar
             </li>
             <li>
               <span role="img" aria-label="color palette emoji">
@@ -102,7 +99,7 @@ function Bio() {
             loading="eager"
           />
           <figcaption>
-            Eit godt triks for å sjula at håret byrja bli grått: Konverter
+            Eit godt triks for å skjula at håret byrja bli grått: Konverter
             bildet til svart/kvit.
           </figcaption>
         </figure>

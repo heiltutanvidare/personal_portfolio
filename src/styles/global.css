@@ -165,7 +165,7 @@ a {
   color: var(--clr-light-shade);
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.125s linear;
+  transition: color 0.25s linear;
 }
 
 a:hover {
