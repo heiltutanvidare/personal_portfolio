@@ -10,7 +10,6 @@ export default function Layout({ children }) {
 
   function toggleNav() {
     setNavOpen(!navOpen)
-    console.log(navOpen)
   }
 
   return (

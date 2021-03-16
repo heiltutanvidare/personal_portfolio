@@ -30,12 +30,12 @@
   position: absolute;
   top: 0;
   left: -101%;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: bottom 2rem right 2rem / 5rem no-repeat var(--clr-dark)
     url("/logo_white.svg");
   background-blend-mode: overlay;
-  z-index: 1100;
+  z-index: 900;
   padding: 2rem;
   transition: left 0.25s ease;
 }
@@ -45,16 +45,39 @@
 }
 
 .navLinks a {
-  padding: 0.5em;
+  padding: 0.5em 0;
   font-weight: 600;
   font-size: var(--fs-md);
   opacity: 0;
   /* margin-right: 0.5em; */
   transition: opacity 0.125s linear;
+  display: inline-block;
 }
 
 .navLinks.open a {
-  opacity: 1;
+  animation: fadeUp 0.25s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.navLinks.open a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.navLinks.open a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.navLinks.open a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 767px) {

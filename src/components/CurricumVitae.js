@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { cv } from "../styles/curricumVitae.module.css"
+import * as styles from "../styles/curricumVitae.module.css"
 
 const CurricumVitae = () => (
   <StaticQuery
@@ -29,9 +29,27 @@ const CurricumVitae = () => (
       }
     `}
     render={data => (
-      <section className={cv}>
+      <section className={styles.cv}>
         <h2>Curricum Vitae</h2>
-        <table>
+        <h3 className={styles.category}>Utdanning</h3>
+        {data.allStrapiEdu.edges.map(edu => (
+          <div key={edu.node.strapiId} className={styles.entry}>
+            <p className={styles.study}>{edu.node.study}</p>
+            <p className={styles.timeframe}>{edu.node.timeframe}</p>
+            <p className={styles.school}>{edu.node.school}</p>
+          </div>
+        ))}
+
+        <h3 className={styles.category}>Relevant arbeidserfaring</h3>
+        {data.allStrapiJob.edges.map(job => (
+          <div key={job.node.strapiId} className={styles.entry}>
+            <p className={styles.position}>{job.node.position}</p>
+            <p className={styles.timeframe}>{job.node.timeframe}</p>
+            <p className={styles.company}>{job.node.company}</p>
+          </div>
+        ))}
+
+        {/* <table>
           <thead>
             <tr>
               <th colSpan="3">Utdanning</th>
@@ -60,7 +78,7 @@ const CurricumVitae = () => (
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </section>
     )}
   ></StaticQuery>

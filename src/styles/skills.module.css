@@ -1,5 +1,5 @@
 .skills {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .skills h3 {
@@ -8,8 +8,6 @@
 }
 
 .skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
   padding: 0;
   margin-top: 1.5em;
 }
@@ -17,9 +15,19 @@
 .skillsContainer li {
   color: var(--clr-light-shade);
   margin-right: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   list-style: none;
   padding: 0;
-  padding-right: 2em;
-  border-right: 1px solid var(--clr-tint);
+}
+
+@media screen and (min-width: 648px) {
+  .skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skillsContainer li {
+    padding-right: 2em;
+    border-right: 1px solid var(--clr-tint);
+  }
 }

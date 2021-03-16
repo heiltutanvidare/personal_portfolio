@@ -1,3 +1,47 @@
 .bio {
   margin-bottom: 3rem;
 }
+
+.bio h2 {
+  margin-bottom: 1em;
+  font-size: var(--fs-sm);
+  font-family: var(--ff-secondary);
+  color: var(--clr-light-shade);
+}
+
+.bio p + p {
+  margin-top: 2em;
+}
+
+.bio li {
+  list-style: none;
+}
+
+.bio figcaption {
+  font-size: var(--fs-sm);
+  margin-top: 0.5em;
+}
+
+.bio figure {
+  margin-bottom: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 2em;
+}
+
+.bio .btn {
+  grid-column: 1 / -1;
+}
+
+@media screen and (min-width: 999px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .bioText {
+    font-size: var(--fs-md);
+  }
+}

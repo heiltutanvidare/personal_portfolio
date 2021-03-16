@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Bio from "../components/Bio"
 import CurricumVitae from "../components/CurricumVitae"
 import Skills from "../components/Skills"
+import { Link } from "gatsby"
 
 export default function About() {
   return (
@@ -17,6 +18,9 @@ export default function About() {
       <Bio />
       <CurricumVitae />
       <Skills />
+      <Link to="/contact" className="btn btn--bio">
+        Ta gjerne kontakt
+      </Link>
     </Layout>
   )
 }

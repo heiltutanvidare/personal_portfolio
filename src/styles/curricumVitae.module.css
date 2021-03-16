@@ -1,3 +1,41 @@
+.cv {
+  margin-top: 6rem;
+  border-top: 1px solid var(--clr-tint);
+  padding-top: 6rem;
+}
+
+.category {
+  font-family: var(--ff-secondary);
+  color: var(--clr-light);
+  margin-top: 3em;
+  font-size: var(--fs-base);
+}
+
+.entry {
+  color: var(--clr-light-shade);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--clr-tint);
+}
+
+@media screen and (min-width: 767px) {
+  .entry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2em;
+  }
+
+  .timeframe {
+    justify-self: end;
+  }
+
+  .school,
+  .company {
+    justify-self: end;
+  }
+}
+
+/* Old styles */
+
 .cv table {
   width: 100%;
   font-size: var(--fs-base);
@@ -13,7 +51,7 @@
 }
 
 .cv table th {
-  text-align-last: left;
+  text-align: left;
   font-family: var(--ff-secondary);
   color: var(--clr-light);
 }
@@ -23,7 +61,7 @@
 }
 
 .cv td {
-  padding: 1.5rem 0;
+  padding: 1.5em 0.5em;
   border-bottom: 1px solid var(--clr-tint);
 }
 
@@ -32,12 +70,8 @@
 }
 
 .cv table td:first-of-type {
-  text-align-last: left;
+  text-align: left;
 }
 
 .cv h3 {
-}
-
-.cv p {
-  margin: 0;
 }

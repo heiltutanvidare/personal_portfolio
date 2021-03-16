@@ -11,7 +11,7 @@ export default function Navbar({ toggleNav, navOpen }) {
       <Link to="/" className={styles.name}>
         Vidar Håland
       </Link>
-      {/* <Hamburger toggleNav={toggleNav} navOpen={navOpen} /> */}
+      <Hamburger toggleNav={toggleNav} navOpen={navOpen} />
       <div
         className={`${styles.navLinks} ${navOpen === true ? styles.open : ""}`}
       >
