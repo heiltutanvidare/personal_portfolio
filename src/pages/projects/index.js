@@ -7,6 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Project({ data }) {
   const projects = data.allStrapiProject.nodes
+  console.log(projects)
 
   return (
     <Layout>
@@ -43,11 +44,7 @@ export const query = graphql`
       nodes {
         cover {
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              formats: AUTO
-              placeholder: BLURRED
-            )
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
         slug

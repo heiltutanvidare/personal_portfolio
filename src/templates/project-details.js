@@ -61,11 +61,7 @@ export const query = graphql`
       tagline
       cover {
         childImageSharp {
-          gatsbyImageData(
-            formats: AUTO
-            placeholder: BLURRED
-            layout: FULL_WIDTH
-          )
+          gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
         }
       }
       stack {

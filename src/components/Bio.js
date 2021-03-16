@@ -13,7 +13,6 @@ function Bio() {
             src="../../static/vidar_som_robot.jpg"
             alt="Vidar teikna som ein robot."
             placeholder="blurred"
-            layout="fullWidth"
             loading="eager"
           />
           <figcaption>Teikning: Lars Slettebø</figcaption>
@@ -100,7 +99,6 @@ function Bio() {
             src="../../static/vidar_fjes_02.jpg"
             alt="Vidar sitt fjes"
             placeholder="blurred"
-            layout="fullWidth"
             loading="eager"
           />
           <figcaption>

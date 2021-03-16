@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
                 slug
                 cover {
                   childImageSharp {
-                    gatsbyImageData(formats: AUTO, placeholder: BLURRED)
+                    gatsbyImageData(placeholder: BLURRED)
                   }
                 }
                 title

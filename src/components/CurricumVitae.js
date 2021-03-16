@@ -34,7 +34,7 @@ const CurricumVitae = () => (
         <h3 className={styles.category}>Utdanning</h3>
         {data.allStrapiEdu.edges.map(edu => (
           <div key={edu.node.strapiId} className={styles.entry}>
-            <p className={styles.study}>{edu.node.study}</p>
+            <p>{edu.node.study}</p>
             <p className={styles.timeframe}>{edu.node.timeframe}</p>
             <p className={styles.school}>{edu.node.school}</p>
           </div>
@@ -43,42 +43,11 @@ const CurricumVitae = () => (
         <h3 className={styles.category}>Relevant arbeidserfaring</h3>
         {data.allStrapiJob.edges.map(job => (
           <div key={job.node.strapiId} className={styles.entry}>
-            <p className={styles.position}>{job.node.position}</p>
+            <p>{job.node.position}</p>
             <p className={styles.timeframe}>{job.node.timeframe}</p>
             <p className={styles.company}>{job.node.company}</p>
           </div>
         ))}
-
-        {/* <table>
-          <thead>
-            <tr>
-              <th colSpan="3">Utdanning</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.allStrapiEdu.edges.map(edu => (
-              <tr key={edu.node.strapiId}>
-                <td>{edu.node.study}</td>
-                <td>{edu.node.timeframe}</td>
-                <td>{edu.node.school}</td>
-              </tr>
-            ))}
-          </tbody>
-          <thead>
-            <tr>
-              <th colSpan="3">Relevant arbeidserfaring</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.allStrapiJob.edges.map(job => (
-              <tr key={job.node.strapiId}>
-                <td>{job.node.position}</td>
-                <td>{job.node.timeframe}</td>
-                <td>{job.node.company}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table> */}
       </section>
     )}
   ></StaticQuery>

@@ -1,8 +1,7 @@
 import React from "react"
 import * as styles from "../styles/header.module.css"
-import Hamburger from "./Hamburger"
 
-export default function Header({ toggleNav, navOpen }) {
+export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logoPlaceholder}></div>
