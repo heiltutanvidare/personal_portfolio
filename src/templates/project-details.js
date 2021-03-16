@@ -43,8 +43,8 @@ export default function ProjectDetails({ data }) {
               </div>
             </div>
           </header>
-          <div>
-            <ReactMarkdown source={description} />
+          <div className={styles.content}>
+            <ReactMarkdown source={description} allowDangerousHtml={true} />
           </div>
         </article>
       </div>

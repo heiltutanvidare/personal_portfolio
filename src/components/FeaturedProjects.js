@@ -1,13 +1,7 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import {
-  featured,
-  projectContainer,
-  projectCard,
-  type,
-  title,
-} from "../styles/featuredProjects.module.css"
+import * as styles from "../styles/featuredProjects.module.css"
 
 export default function FeaturedProjects() {
   return (
@@ -35,24 +29,24 @@ export default function FeaturedProjects() {
         }
       `}
       render={data => (
-        <section className={featured}>
+        <section className={styles.featured}>
           <header>
             <h2>Utvalde prosjekt</h2>
             <Link to="/projects">Sjå alle</Link>
           </header>
-          <div className={projectContainer}>
+          <div className={styles.projectContainer}>
             {data.allStrapiProject.edges.map(project => (
               <Link
                 to={`/projects/${project.node.slug}`}
-                className={projectCard}
+                className={styles.projectCard}
                 key={project.node.strapiId}
               >
                 <GatsbyImage
                   image={getImage(project.node.cover)}
                   alt={project.node.title}
                 />
-                <p className={type}>{project.node.type}</p>
-                <h2 className={title}>{project.node.title}</h2>
+                <p className={styles.type}>{project.node.type}</p>
+                <h2 className={styles.title}>{project.node.title}</h2>
               </Link>
             ))}
           </div>

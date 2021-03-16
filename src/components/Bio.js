@@ -40,11 +40,36 @@ function Bio() {
             grafisk materiell utanfor den redaksjonelle verda. Eksempel er:
           </p>
           <ul>
-            <li>📚 Magasin og bøker</li>
-            <li>📃 Prosjektrapportar</li>
-            <li>🍻 Øl-etikettar</li>
-            <li>🎨 Logo og profilering</li>
-            <li>📸 Fotografering</li>
+            <li>
+              <span role="img" aria-label="stacked books emoji">
+                📚
+              </span>{" "}
+              Magasin og bøker
+            </li>
+            <li>
+              <span role="img" aria-label="curled paper emoji">
+                📃
+              </span>{" "}
+              Prosjektrapportar
+            </li>
+            <li>
+              <span role="img" aria-label="beer glasses emoji">
+                🍻
+              </span>{" "}
+              Øl-etikettar
+            </li>
+            <li>
+              <span role="img" aria-label="color palette emoji">
+                🎨
+              </span>{" "}
+              Logo og profilering
+            </li>
+            <li>
+              <span role="img" aria-label="camera emoji">
+                📸
+              </span>{" "}
+              Fotografering
+            </li>
           </ul>
         </div>
         <div className={styles.bioText}>
@@ -59,7 +84,10 @@ function Bio() {
           </p>
           <p>
             Eg bur saman med kjærasten min – Mona – og til hausten skal me to
-            blir til tre. Noko me gler oss svært mykje til 👶🏻
+            blir til tre. Noko me gler oss svært mykje til{" "}
+            <span role="img" aria-label="baby emoji">
+              👶🏻
+            </span>
           </p>
           <p>
             Eg er for tida aktiv jobbsøkar og tar{" "}

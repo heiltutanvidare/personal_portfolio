@@ -1,13 +1,12 @@
 import React from "react"
 import Layout from "../../components/Layout"
 import Hero from "../../components/Hero"
-import { projectsContainer } from "../../styles/projects.module.css"
+import * as styles from "../../styles/featuredProjects.module.css"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Project({ data }) {
-  const projects = data.allStrapiProject.edges
-  console.log(projects)
+  const projects = data.allStrapiProject.nodes
 
   return (
     <Layout>
@@ -20,19 +19,18 @@ export default function Project({ data }) {
         </p>
         <h1>Prosjekt eg har arbeidd med dei siste åra</h1>
       </Hero>
-      <div className={projectsContainer}>
+      <div className={styles.projectContainer}>
         {projects.map(project => (
-          <Link
-            to={`/projects/${project.node.slug}`}
-            key={project.node.strapiId}
-          >
-            <GatsbyImage
-              image={getImage(project.node.cover)}
-              alt={project.node.title}
-            />
-            <p>{project.node.tagline}</p>
-            <h1>{project.node.title}</h1>
-          </Link>
+          <div key={project.strapiId} className={styles.projectCard}>
+            <Link to={`/projects/${project.slug}`}>
+              <GatsbyImage
+                image={getImage(project.cover)}
+                alt={project.title}
+              />
+              <p className={styles.type}>{project.type}</p>
+              <h2 className={styles.title}>{project.title}</h2>
+            </Link>
+          </div>
         ))}
       </div>
     </Layout>
@@ -41,21 +39,21 @@ export default function Project({ data }) {
 
 export const query = graphql`
   {
-    allStrapiProject {
-      edges {
-        node {
-          featured
-          slug
-          cover {
-            childImageSharp {
-              gatsbyImageData(formats: AUTO, placeholder: BLURRED)
-            }
+    allStrapiProject(sort: { fields: strapiId, order: ASC }) {
+      nodes {
+        cover {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              formats: AUTO
+              placeholder: BLURRED
+            )
           }
-          tagline
-          title
-          type
-          strapiId
         }
+        slug
+        title
+        type
+        strapiId
       }
     }
   }
