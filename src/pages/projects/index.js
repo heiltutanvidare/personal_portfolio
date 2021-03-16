@@ -17,7 +17,7 @@ export default function Project({ data }) {
             in your life.
           </em>
         </p>
-        <h1>Prosjekt eg har arbeidd med dei siste åra</h1>
+        <h1>Eit utval av dei mange ulike prosjekta eg har arbeidd med</h1>
       </Hero>
       <div className={styles.projectContainer}>
         {projects.map(project => (
