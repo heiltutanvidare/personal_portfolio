@@ -1,10 +1,11 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import * as styles from "../styles/project-details.module.css"
+import ArrowRight from "../components/icons/ArrowRight"
 
 export default function ProjectDetails({ data }) {
   const {
@@ -31,11 +32,11 @@ export default function ProjectDetails({ data }) {
         <article>
           <header>
             <div>
-              <h3>What it's all about</h3>
+              <h3>Oppgåva</h3>
               <p>{blurb}.</p>
             </div>
             <div>
-              <h3>Concepts in this projects</h3>
+              <h3>Sentrale tema</h3>
               <div className={styles.stack}>
                 {stack.map(item => (
                   <small key={item.id}>{item.title}</small>
@@ -44,8 +45,12 @@ export default function ProjectDetails({ data }) {
             </div>
           </header>
           <div className={styles.content}>
+            <h3>Om prosjektet</h3>
             <ReactMarkdown source={description} allowDangerousHtml={true} />
           </div>
+          <Link to="/projects" className={styles.returnLink}>
+            Sjå alle prosjekt <ArrowRight />
+          </Link>
         </article>
       </div>
     </Layout>

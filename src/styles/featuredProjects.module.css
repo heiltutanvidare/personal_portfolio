@@ -1,6 +1,6 @@
 .featured header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   margin-bottom: 1em;
 }
@@ -9,6 +9,10 @@
 .featured header h2 {
   font-family: var(--ff-secondary);
   font-size: var(--fs-sm);
+}
+
+.featured header a {
+  text-align: right;
 }
 
 @media screen and (min-width: 900px) {

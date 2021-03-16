@@ -2,6 +2,7 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../styles/featuredProjects.module.css"
+import ArrowRight from "./icons/ArrowRight"
 
 export default function FeaturedProjects() {
   return (
@@ -32,7 +33,9 @@ export default function FeaturedProjects() {
         <section className={styles.featured}>
           <header>
             <h2>Utvalde prosjekt</h2>
-            <Link to="/projects">Sjå alle</Link>
+            <Link to="/projects">
+              Sjå alle <ArrowRight />
+            </Link>
           </header>
           <div className={styles.projectContainer}>
             {data.allStrapiProject.edges.map(project => (
