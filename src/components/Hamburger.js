@@ -8,6 +8,9 @@ export default function Hamburger({ toggleNav, navOpen }) {
         navOpen === true ? hamburgerStyles.open : ""
       }`}
       onClick={toggleNav}
+      onKeyDown={toggleNav}
+      role="button"
+      tabIndex="0"
     >
       <div
         className={`${hamburgerStyles.line} ${hamburgerStyles.line01}`}
