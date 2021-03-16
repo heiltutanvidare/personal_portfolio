@@ -7,7 +7,7 @@
   --clr-tint: #2c353a;
   --clr-light: #f3f5f6;
   --clr-light-shade: #b7c1c8;
-  --clr-heart: #940079;
+  --clr-heart: #c700a2;
 
   /* Font family */
   --ff-main: "Open Sans", sans-serif;
@@ -31,13 +31,8 @@
   --br-lg: 24px;
   --br-xl: 36px;
 
-  /* Breakpoints */
-  --bp-xl: 1824px;
-  --bp-lg: 1224px;
-  --bp-md: 1024px;
-  --bp-sm: 768px;
-  --bp-xsm: 640px;
-  --bp-mini: 321px;
+  /* max content width */
+  --maxWidth: 90rem;
 }
 
 /* 
@@ -150,7 +145,7 @@ body {
 .layout {
   padding-left: 12rem;
   padding-right: 4rem;
-  max-width: 1500px;
+  max-width: var(--maxWidth);
   margin: 0 auto;
 }
 
