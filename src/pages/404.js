@@ -1,6 +1,6 @@
 import React from "react"
-import { animationColor } from "../components/variables/Colors"
 import Hero from "../components/Hero"
+import { animationColor } from "../components/variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ArrowRight from "../components/icons/ArrowRight"
 

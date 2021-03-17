@@ -3,7 +3,8 @@ import Hero from "../components/Hero"
 import Bio from "../components/Bio"
 import CurricumVitae from "../components/CurricumVitae"
 import Skills from "../components/Skills"
-import { Link } from "gatsby"
+import { animationColor } from "../components/variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function About() {
   return (
@@ -17,9 +18,15 @@ export default function About() {
       <Bio />
       <CurricumVitae />
       <Skills />
-      <Link to="/contact" className="btn btn--bio">
+      <AniLink
+        paintDrip
+        to="/contact"
+        className="btn btn--bio"
+        hex={animationColor}
+        bg={animationColor}
+      >
         Ta gjerne kontakt
-      </Link>
+      </AniLink>
     </>
   )
 }

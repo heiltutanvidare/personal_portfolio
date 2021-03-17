@@ -2,7 +2,6 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import * as styles from "../styles/project-details.module.css"
 import ArrowRight from "../components/icons/ArrowRight"
@@ -18,7 +17,7 @@ export default function ProjectDetails({ data }) {
     blurb,
   } = data.project
   return (
-    <Layout>
+    <>
       <Hero>
         <p>{type}</p>
         <h1>{tagline}</h1>
@@ -53,7 +52,7 @@ export default function ProjectDetails({ data }) {
           </Link>
         </article>
       </div>
-    </Layout>
+    </>
   )
 }
 
