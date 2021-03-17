@@ -7,7 +7,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Project({ data }) {
   const projects = data.allStrapiProject.nodes
-  console.log(projects)
 
   return (
     <Layout>
