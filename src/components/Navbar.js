@@ -1,11 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import * as styles from "../styles/navbar.module.css"
 import { animationColor } from "./variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Hamburger from "./Hamburger"
 import MainLogo from "./MainLogo"
 
-export default function Navbar({ toggleNav, navOpen }) {
+export default function Navbar() {
+  // Toggle nav menu
+  const [navOpen, setNavOpen] = useState(false)
+  console.log(navOpen)
+
+  function toggleNav() {
+    setNavOpen(!navOpen)
+  }
+
+  // Close nav as link if mobile nav is clicked
+  function handleNavClick() {
+    if (window.innerWidth < 768) {
+      setTimeout(toggleNav, 1000)
+    }
+  }
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.inner}>
@@ -25,7 +40,13 @@ export default function Navbar({ toggleNav, navOpen }) {
             navOpen === true ? styles.open : ""
           }`}
         >
-          <AniLink paintDrip to="/" hex={animationColor} bg={animationColor}>
+          <AniLink
+            paintDrip
+            to="/"
+            hex={animationColor}
+            bg={animationColor}
+            onClick={handleNavClick}
+          >
             Heim
           </AniLink>
           <AniLink
@@ -33,6 +54,7 @@ export default function Navbar({ toggleNav, navOpen }) {
             to="/projects"
             hex={animationColor}
             bg={animationColor}
+            onClick={handleNavClick}
           >
             Prosjekt
           </AniLink>
@@ -41,6 +63,7 @@ export default function Navbar({ toggleNav, navOpen }) {
             to="/about"
             hex={animationColor}
             bg={animationColor}
+            onClick={handleNavClick}
           >
             Om meg
           </AniLink>
@@ -49,6 +72,7 @@ export default function Navbar({ toggleNav, navOpen }) {
             to="/contact"
             hex={animationColor}
             bg={animationColor}
+            onClick={handleNavClick}
           >
             Kontakt
           </AniLink>
