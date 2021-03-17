@@ -6,7 +6,7 @@
 .hero h1 {
   font-size: var(--fs-xxl);
   line-height: 1.4;
-  max-width: 30ch;
+  max-width: 33ch;
 }
 
 @media screen and (max-width: 767px) {

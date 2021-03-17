@@ -10,7 +10,7 @@ export default function Home() {
       <Hero>
         <h1>
           Vidar sitt hjarte <span>bankar</span> for digital design og visuell
-          historieforteljing
+          historieforteljing – pakka inn i ryddig og oversiktleg kode
         </h1>
       </Hero>
       <FeaturedProjects />
