@@ -1,9 +1,11 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Hero from "../components/Hero"
 import * as styles from "../styles/project-details.module.css"
+import { animationColor } from "../components/variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ArrowRight from "../components/icons/ArrowRight"
 
 export default function ProjectDetails({ data }) {
@@ -47,9 +49,15 @@ export default function ProjectDetails({ data }) {
             <h3>Om prosjektet</h3>
             <ReactMarkdown source={description} allowDangerousHtml={true} />
           </div>
-          <Link to="/projects" className={styles.returnLink}>
+          <AniLink
+            paintDrip
+            to="/projects"
+            hex={animationColor}
+            bg={animationColor}
+            className={styles.returnLink}
+          >
             Sjå alle prosjekt <ArrowRight />
-          </Link>
+          </AniLink>
         </article>
       </div>
     </>
