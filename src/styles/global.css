@@ -147,6 +147,7 @@ body {
   padding-right: 4rem;
   max-width: var(--maxWidth);
   margin: 0 auto;
+  position: relative;
 }
 
 @media screen and (max-width: 767px) {
