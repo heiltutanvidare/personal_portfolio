@@ -179,6 +179,15 @@ a:hover {
   margin-top: 2rem;
 }
 
+/* Layout showcase for Folk project */
+.layout__showcase {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  justify-items: center;
+}
+
 @media screen and (min-width: 768px) {
   nav .mobileOnly {
     display: none;
