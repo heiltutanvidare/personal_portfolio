@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useContactData } from "../hooks/use-contact-data"
-import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import * as styles from "../styles/contact.module.css"
 
@@ -12,7 +11,7 @@ export default function Contact({ data }) {
   const { email, github, instagram, linkedin, phone } = useContactData()
 
   return (
-    <Layout>
+    <>
       <Hero>
         <p>På jakt etter nye eventyr</p>
         <h1>
@@ -64,7 +63,7 @@ export default function Contact({ data }) {
           className={styles.contactImg}
         />
       </div>
-    </Layout>
+    </>
   )
 }
 

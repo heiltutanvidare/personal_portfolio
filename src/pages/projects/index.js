@@ -1,15 +1,16 @@
 import React from "react"
-import Layout from "../../components/Layout"
 import Hero from "../../components/Hero"
 import * as styles from "../../styles/featuredProjects.module.css"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
+import { animationColor } from "../../components/variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Project({ data }) {
   const projects = data.allStrapiProject.nodes
 
   return (
-    <Layout>
+    <>
       <Hero>
         <p>
           <em>
@@ -24,18 +25,23 @@ export default function Project({ data }) {
       <div className={styles.projectContainer}>
         {projects.map(project => (
           <div key={project.strapiId} className={styles.projectCard}>
-            <Link to={`/projects/${project.slug}`}>
+            <AniLink
+              paintDrip
+              to={`/projects/${project.slug}`}
+              hex={animationColor}
+              bg={animationColor}
+            >
               <GatsbyImage
                 image={getImage(project.cover)}
                 alt={project.title}
               />
               <p className={styles.type}>{project.type}</p>
               <h2 className={styles.title}>{project.title}</h2>
-            </Link>
+            </AniLink>
           </div>
         ))}
       </div>
-    </Layout>
+    </>
   )
 }
 

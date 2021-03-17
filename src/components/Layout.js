@@ -15,7 +15,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <Navbar toggleNav={toggleNav} navOpen={navOpen} />
-      <Header toggleNav={toggleNav} navOpen={navOpen} />
+      <Header />
       <div className="content">{children}</div>
       <Footer />
     </div>

@@ -30,14 +30,14 @@
   max-width: 46ch;
 }
 
-.hero h1 span {
+.bankar {
   color: var(--clr-heart);
   animation: heartBeat 1s ease-in-out infinite;
   display: inline-block;
   position: relative;
 }
 
-.hero h1 span::before {
+.bankar::before {
   content: "💞";
   position: absolute;
   top: -1em;

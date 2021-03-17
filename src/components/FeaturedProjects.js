@@ -1,5 +1,7 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+import { animationColor } from "./variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../styles/featuredProjects.module.css"
 import ArrowRight from "./icons/ArrowRight"
@@ -33,16 +35,24 @@ export default function FeaturedProjects() {
         <section className={styles.featured}>
           <header>
             <h2>Utvalde prosjekt</h2>
-            <Link to="/projects">
+            <AniLink
+              paintDrip
+              to="/projects"
+              hex={animationColor}
+              bg={animationColor}
+            >
               Sjå alle <ArrowRight />
-            </Link>
+            </AniLink>
           </header>
           <div className={styles.projectContainer}>
             {data.allStrapiProject.edges.map(project => (
-              <Link
+              <AniLink
                 to={`/projects/${project.node.slug}`}
                 className={styles.projectCard}
+                paintDrip
                 key={project.node.strapiId}
+                hex={animationColor}
+                bg={animationColor}
               >
                 <GatsbyImage
                   image={getImage(project.node.cover)}
@@ -50,7 +60,7 @@ export default function FeaturedProjects() {
                 />
                 <p className={styles.type}>{project.node.type}</p>
                 <h2 className={styles.title}>{project.node.title}</h2>
-              </Link>
+              </AniLink>
             ))}
           </div>
         </section>
