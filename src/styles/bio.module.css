@@ -26,6 +26,10 @@
   margin-bottom: 2em;
 }
 
+.bio figure picture {
+  border: 1px solid var(--clr-tint);
+}
+
 .grid {
   display: grid;
   grid-gap: 1em;

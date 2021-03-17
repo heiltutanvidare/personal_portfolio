@@ -15,16 +15,17 @@
   text-align: right;
 }
 
-.projectCard img {
-  background-color: var(--clr-tint);
-  background: radial-gradient(var(--clr-tint), var(--clr-dark));
+.projectCard {
   filter: grayscale(100%);
   transition: all 0.25s linear;
 }
 
-.projectCard:hover img {
-  transition: all 0.25s linear;
+.projectCard:hover {
   filter: grayscale(0%);
+}
+
+.projectCard img {
+  background: radial-gradient(var(--clr-tint), var(--clr-dark));
 }
 
 .projectCard:first-child {
