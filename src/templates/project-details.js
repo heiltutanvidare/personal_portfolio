@@ -7,6 +7,7 @@ import * as styles from "../styles/project-details.module.css"
 import { animationColor } from "../components/variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ArrowRight from "../components/icons/ArrowRight"
+import SEO from "../components/SEO"
 
 export default function ProjectDetails({ data }) {
   const {
@@ -20,6 +21,7 @@ export default function ProjectDetails({ data }) {
   } = data.project
   return (
     <>
+      <SEO title={title} description={blurb} />
       <Hero>
         <p>{type}</p>
         <h1>{tagline}</h1>

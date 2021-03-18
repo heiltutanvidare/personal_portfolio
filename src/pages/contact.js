@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useContactData } from "../hooks/use-contact-data"
 import Hero from "../components/Hero"
 import * as styles from "../styles/contact.module.css"
+import SEO from "../components/SEO"
 
 export default function Contact({ data }) {
   const image = getImage(data.allStrapiContact.nodes[0].contact_photo)
@@ -12,6 +13,7 @@ export default function Contact({ data }) {
 
   return (
     <>
+      <SEO title="Kontakt" description="Slik får kontakt med Vidar Håland" />
       <Hero>
         <p>På jakt etter nye eventyr</p>
         <h1>

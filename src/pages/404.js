@@ -3,10 +3,15 @@ import Hero from "../components/Hero"
 import { animationColor } from "../components/variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ArrowRight from "../components/icons/ArrowRight"
+import SEO from "../components/SEO"
 
 export default function NotFound() {
   return (
     <>
+      <SEO
+        title="404"
+        description="Sida du leitar etter er diverre ikkje å finna"
+      />
       <Hero>
         <h1>
           Noko gjekk gale{" "}

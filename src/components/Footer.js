@@ -13,16 +13,16 @@ function Footer() {
           <img src="/logo_white.svg" alt="logo watermark" />
         </div>
         <div className={styles.footerPart}>
-          <h4>Navigation</h4>
+          <h4>Navigasjon</h4>
           <div className={styles.links}>
-            <Link to="/">Home</Link>
+            <Link to="/">Heim</Link>
             <Link to="/projects">Prosjekt</Link>
             <Link to="/about">Om meg</Link>
             <Link to="/contact">Kontakt</Link>
           </div>
         </div>
         <div className={styles.footerPart}>
-          <h4>Contact</h4>
+          <h4>Kontakt</h4>
           <div className={styles.links}>
             <a href={`mailto:${email}`}>{email}</a>
             <a href={`tel:${phone}`}>{phone}</a>

@@ -5,14 +5,19 @@ import CurricumVitae from "../components/CurricumVitae"
 import Skills from "../components/Skills"
 import { animationColor } from "../components/variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import SEO from "../components/SEO"
 
 export default function About() {
   return (
     <>
+      <SEO
+        title="Om"
+        description="Om Vidar Håland – Frontend-utviklar og designar"
+      />
       <Hero>
         <h1>
-          Eg er ein teknologi- og design-glad nerd, som etter mange år i
-          avisbransjen har starta på reisa mot å bli FrontEnd-utviklar
+          Eg er ein teknologi- og design-glad nerd, som etter fleire år i
+          avisbransjen har starta på reisa mot å bli Frontend-utviklar
         </h1>
       </Hero>
       <Bio />

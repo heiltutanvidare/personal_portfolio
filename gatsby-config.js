@@ -5,7 +5,15 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Vidar Håland",
+    description:
+      "Vidar Håland er nyutdanna FrontEnd-utviklar med bakgrunn som designer i lokalavisa Kvinnheringen.",
+    url: "https://vidarh.netlify.app",
+    author: "Vidar Håland",
+    image: "/vidar_som_robot.jpg",
+    twitterUsername: "@ividaren",
+  },
   plugins: [
     {
       resolve: `gatsby-source-strapi`,
@@ -17,6 +25,7 @@ module.exports = {
         singleTypes: [`contact`],
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images

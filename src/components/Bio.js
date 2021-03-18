@@ -19,15 +19,15 @@ function Bio() {
         </figure>
         <div className={styles.bioText}>
           <p>
-            Eg har bakgrunn som designer i lokalavisa Kvinnheringen, der eg
-            etter 12 fantastiske år tok valet om å slutta i jobben for å satse
-            på ei digital framtid. Første steget på den nye vegen vart difor
-            studiet «FrontEnd-utvikling».
+            Eg har bakgrunn som designar i lokalavisa Kvinnheringen, der eg
+            etter 12 fantastiske år tok valet om å slutte i jobben for å satse
+            på ei meir digital framtid. Første steget på den nye vegen vart
+            difor studiet «Frontend-utvikling».
           </p>
           <p>
             Samarbeidet med den dyktige redaksjonen i Kvinnheringen gav grobotn
             for kreativitet og utvikling eg berre kunne drøyma om – noko som
-            resulterte i at vi vann prisar i fleire konkurransar i hos mellom
+            resulterte i at vi vann prisar i fleire konkurransar hos mellom
             andre: "European Newspaper Awards", "Society for News Design",
             "Mediebedriftene" og "Landslaget for Lokalaviser"
           </p>
@@ -79,6 +79,10 @@ function Bio() {
             duppedittar» er inga overdriving.
           </p>
           <p>
+            Eg håpar å kunne jobbe med – og utvikla meg – innan design og ny
+            teknologi i resten av mitt yrkesaktive liv.
+          </p>
+          <p>
             Eg bur saman med kjærasten min – Mona – og til hausten skal me to
             blir til tre. Noko me gler oss svært mykje til{" "}
             <span role="img" aria-label="baby emoji">
@@ -86,8 +90,11 @@ function Bio() {
             </span>
           </p>
           <p>
-            Eg er for tida aktiv jobbsøkar og tar{" "}
+            Eg er for tida aktiv jobbsøkjar og tar{" "}
             <Link to="/contact">svært gjerne ein prat.</Link>
+          </p>
+          <p>
+            Ynskjer du å sjå CV'en min, så finn du den ved å scrolla vidare ned.
           </p>
         </div>
 

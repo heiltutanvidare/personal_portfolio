@@ -5,12 +5,17 @@ import { graphql } from "gatsby"
 import { animationColor } from "../../components/variables/Colors"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import SEO from "../../components/SEO"
 
 export default function Project({ data }) {
   const projects = data.allStrapiProject.nodes
 
   return (
     <>
+      <SEO
+        title="Prosjekt"
+        description="Oversikt over prosjekt Vidar Håland har arbeidd med"
+      />
       <Hero>
         <p>
           <em>
