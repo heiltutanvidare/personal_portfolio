@@ -27,7 +27,7 @@ function Bio() {
           <p>
             Samarbeidet med den dyktige redaksjonen i Kvinnheringen gav grobotn
             for kreativitet og utvikling eg berre kunne drøyma om – noko som
-            resulterte i at vi vann prisar i fleire konkurransar hos mellom
+            resulterte i at me vann prisar i fleire konkurransar hos mellom
             andre: "European Newspaper Awards", "Society for News Design",
             "Mediebedriftene" og "Landslaget for Lokalaviser"
           </p>
@@ -84,7 +84,7 @@ function Bio() {
           </p>
           <p>
             Eg bur saman med kjærasten min – Mona – og til hausten skal me to
-            blir til tre. Noko me gler oss svært mykje til{" "}
+            bli til tre. Noko me gler oss svært mykje til{" "}
             <span role="img" aria-label="baby emoji">
               👶🏻
             </span>
