@@ -5,6 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Hero from "../components/Hero"
 import * as styles from "../styles/project-details.module.css"
 import { animationColor } from "../components/variables/Colors"
+import { transitionSpeed } from "../components/variables/Speed"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ArrowRight from "../components/icons/ArrowRight"
 import SEO from "../components/SEO"
@@ -57,6 +58,7 @@ export default function ProjectDetails({ data }) {
             hex={animationColor}
             bg={animationColor}
             className={styles.returnLink}
+            duration={transitionSpeed}
           >
             Sjå alle prosjekt <ArrowRight />
           </AniLink>
