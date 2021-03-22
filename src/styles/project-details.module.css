@@ -9,6 +9,16 @@
   line-height: 2;
 }
 
+.content p:first-of-type::first-letter {
+  padding: 0.3em 0.5em;
+  background-color: var(--clr-tint);
+  font-size: 1.9rem;
+  line-height: 100%;
+  margin-right: 0.65rem;
+  margin-top: 0.5rem;
+  float: left;
+}
+
 .content a {
   position: relative;
   padding-left: 1.5em;
