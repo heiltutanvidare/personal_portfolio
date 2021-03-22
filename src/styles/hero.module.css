@@ -7,9 +7,10 @@
   font-size: var(--fs-xxl);
   line-height: 1.4;
   max-width: 33ch;
+  opacity: 0; /* Will fade in with GSAP*/
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1080px) {
   .hero h1 {
     font-size: var(--fs-xl);
   }

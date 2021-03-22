@@ -4,6 +4,7 @@ import Bio from "../components/Bio"
 import CurricumVitae from "../components/CurricumVitae"
 import Skills from "../components/Skills"
 import { animationColor } from "../components/variables/Colors"
+import { transitionSpeed } from "../components/variables/Speed"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 
@@ -29,6 +30,7 @@ export default function About() {
         className="btn btn--bio"
         hex={animationColor}
         bg={animationColor}
+        duration={transitionSpeed}
       >
         Ta gjerne kontakt
       </AniLink>

@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { animationColor } from "./variables/Colors"
+import { transitionSpeed } from "./variables/Speed"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../styles/featuredProjects.module.css"
@@ -37,6 +38,7 @@ export default function FeaturedProjects() {
             <h2>Utvalde prosjekt</h2>
             <AniLink
               paintDrip
+              duration={transitionSpeed}
               to="/projects"
               hex={animationColor}
               bg={animationColor}
@@ -50,6 +52,7 @@ export default function FeaturedProjects() {
                 to={`/projects/${project.node.slug}`}
                 className={styles.projectCard}
                 paintDrip
+                duration={transitionSpeed}
                 key={project.node.strapiId}
                 hex={animationColor}
                 bg={animationColor}

@@ -3,6 +3,7 @@ import Hero from "../../components/Hero"
 import * as styles from "../../styles/featuredProjects.module.css"
 import { graphql } from "gatsby"
 import { animationColor } from "../../components/variables/Colors"
+import { transitionSpeed } from "../../components/variables/Speed"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SEO from "../../components/SEO"
@@ -35,6 +36,7 @@ export default function Project({ data }) {
               to={`/projects/${project.slug}`}
               hex={animationColor}
               bg={animationColor}
+              duration={transitionSpeed}
             >
               <GatsbyImage
                 image={getImage(project.cover)}

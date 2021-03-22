@@ -1,6 +1,8 @@
 import React from "react"
 import { introAbout } from "../styles/introAbout.module.css"
-import { Link } from "gatsby"
+import { transitionSpeed } from "./variables/Speed"
+import { animationColor } from "./variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function IntroAbout() {
   return (
@@ -11,9 +13,16 @@ export default function IntroAbout() {
         papiravisbransjen – tok steget over i den digitale verda, med mål om å
         ein dag kunne få jobbe med digital historieforteljing
       </p>
-      <Link to="/about" className="btn">
+      <AniLink
+        paintDrip
+        duration={transitionSpeed}
+        hex={animationColor}
+        bg={animationColor}
+        to="/about"
+        className="btn"
+      >
         Meir om meg
-      </Link>
+      </AniLink>
     </section>
   )
 }

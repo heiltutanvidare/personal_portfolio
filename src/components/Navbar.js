@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import * as styles from "../styles/navbar.module.css"
 import { animationColor } from "./variables/Colors"
+import { transitionSpeed } from "./variables/Speed"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Hamburger from "./Hamburger"
 import MainLogo from "./MainLogo"
@@ -27,9 +28,10 @@ export default function Navbar() {
         <MainLogo />
         <AniLink
           paintDrip
-          to="/"
+          duration={transitionSpeed}
           hex={animationColor}
           bg={animationColor}
+          to="/"
           className={styles.name}
         >
           Vidar Håland
@@ -42,6 +44,7 @@ export default function Navbar() {
         >
           <AniLink
             paintDrip
+            duration={transitionSpeed}
             to="/"
             hex={animationColor}
             bg={animationColor}
@@ -51,6 +54,7 @@ export default function Navbar() {
           </AniLink>
           <AniLink
             paintDrip
+            duration={transitionSpeed}
             to="/projects"
             hex={animationColor}
             bg={animationColor}
@@ -60,6 +64,7 @@ export default function Navbar() {
           </AniLink>
           <AniLink
             paintDrip
+            duration={transitionSpeed}
             to="/about"
             hex={animationColor}
             bg={animationColor}
@@ -69,6 +74,7 @@ export default function Navbar() {
           </AniLink>
           <AniLink
             paintDrip
+            duration={transitionSpeed}
             to="/contact"
             hex={animationColor}
             bg={animationColor}

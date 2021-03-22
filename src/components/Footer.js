@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
 import React from "react"
 import { useContactData } from "../hooks/use-contact-data"
+import { transitionSpeed } from "./variables/Speed"
+import { animationColor } from "./variables/Colors"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import * as styles from "../styles/footer.module.css"
 
 function Footer() {
@@ -15,10 +17,42 @@ function Footer() {
         <div className={styles.footerPart}>
           <h4>Navigasjon</h4>
           <div className={styles.links}>
-            <Link to="/">Heim</Link>
-            <Link to="/projects">Prosjekt</Link>
-            <Link to="/about">Om meg</Link>
-            <Link to="/contact">Kontakt</Link>
+            <AniLink
+              paintDrip
+              duration={transitionSpeed}
+              hex={animationColor}
+              bg={animationColor}
+              to="/"
+            >
+              Heim
+            </AniLink>
+            <AniLink
+              paintDrip
+              duration={transitionSpeed}
+              hex={animationColor}
+              bg={animationColor}
+              to="/projects"
+            >
+              Prosjekt
+            </AniLink>
+            <AniLink
+              paintDrip
+              duration={transitionSpeed}
+              hex={animationColor}
+              bg={animationColor}
+              to="/about"
+            >
+              Om meg
+            </AniLink>
+            <AniLink
+              paintDrip
+              duration={transitionSpeed}
+              hex={animationColor}
+              bg={animationColor}
+              to="/contact"
+            >
+              Kontakt
+            </AniLink>
           </div>
         </div>
         <div className={styles.footerPart}>
