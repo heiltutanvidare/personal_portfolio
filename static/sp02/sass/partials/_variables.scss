@@ -1,0 +1,55 @@
+// Font H1
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&display=swap");
+$ff-h1: "Big Shoulders Display", Arial, Helvetica, sans-serif;
+
+// Font Headings
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+$ff-headings: "Roboto", sans-serif;
+
+// Font Body
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,400&display=swap");
+$ff-body: "Ubuntu", sans-serif;
+
+// Colors
+$colors: (
+	"clr-dark": #25292c,
+	"clr-white": #fafafa,
+	"clr-true-white": #fff,
+	"clr-primary": #aa00ff,
+	"clr-secondary": #8ab300,
+	"clr-error": rgb(171, 0, 0),
+	"clr-warning": rgb(255, 153, 0),
+);
+
+@function getColor($color) {
+	@return map-get($colors, $color);
+}
+
+// Transitions
+$transition-fast: 0.125s cubic-bezier(1, 0.25, 0.4, 1.17);
+$transition-medium: 0.25s cubic-bezier(1, 0.25, 0.4, 1.17);
+$transition-slow: 0.5s cubic-bezier(1, 0.25, 0.4, 1.17);
+
+// Box shadows
+$box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
+$box-shadow-hover: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+
+// Border radius
+$br-sm: 8px;
+$br-md: 10px;
+$br-lg: 12px;
+$br-xl: 16px;
+
+// Break points
+$bp-xs: 0px;
+$bp-sm: 600px;
+$bp-md: 960px;
+$bp-lg: 1280px;
+$bp-xl: 1920px;
+
+// Header height
+// Is adjusted in Javascript using
+// event listener on window resize
+:root {
+	--header-height: auto;
+}

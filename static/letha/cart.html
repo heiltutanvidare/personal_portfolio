@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Letha shoes | Shopping cart</title>
+        <meta name="description" content="Your Letha.com shopping cart" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- Header section with navigation -->
+        <header>
+            <div class="header__inner">
+                <div class="hamburger mobile--only">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+
+                <a href="index.html" class="header__logo">
+                    <img
+                        src="images/graphics/letha_logo.svg"
+                        alt="Letha shoes logo"
+                    />
+                </a>
+
+                <div class="header__link-container">
+                    <a
+                        href="account.html"
+                        class="header__link header__link--account"
+                    >
+                        <img
+                            src="images/graphics/ic_person.svg"
+                            alt="Acount page icon"
+                        />
+                        <p class="link__text desktop--only">Account</p>
+                    </a>
+                    <a href="cart.html" class="header__link header__link--cart">
+                        <img
+                            src="images/graphics/ic_cart.svg"
+                            alt="Shopping cart icon"
+                        />
+                        <p class="link__text desktop--only">Cart</p>
+                        <div class="cart__indicator"></div>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="categories.html">News</a></li>
+                    <li><a href="categories.html">Boots</a></li>
+                    <li><a href="categories.html">Dress shoes</a></li>
+                    <li><a href="categories.html">Sneakers</a></li>
+                    <li><a href="categories.html">Sandals</a></li>
+                    <li><a href="categories.html">Loafers</a></li>
+                    <li>
+                        <a href="categories.html"
+                            >Clearance <strong>Save 30%</strong></a
+                        >
+                    </li>
+                    <li><a href="categories.html">Brands</a></li>
+                    <li><a href="categories.html">Accessories</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <nav class="breadcrumb">
+            <a href="index.html" class="breadcrumb__link">Home</a>
+            <p class="breadcrumb__chevron">></p>
+            <a href="#" class="breadcrumb__link breadcrumb__link--active"
+                >Shopping Cart</a
+            >
+        </nav>
+
+        <main>
+            <section class="cart">
+                <h1 class="cart__title">Your items:</h1>
+                <div class="cart__items">
+                    <div class="cart__item">
+                        <a href="product.html">
+                            <img
+                                src="images/photos/product_shoe_left.png"
+                                alt=""
+                                class="cart__img"
+                            />
+                        </a>
+                        <div class="cart__text-container">
+                            <p class="cart__item__text">Product name</p>
+                            <p class="cart__item__text">Size: 45</p>
+                            <p class="cart__item__text">
+                                Quantity: <span id="productQuantity">1</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--cta" id="checkout">Checkout</button>
+                <div class="checkoutMessage">
+                    <p class="wohoo">🥳</p>
+                    <p class="checkoutMessage__text">
+                        Thank you so much for testing my website!
+                    </p>
+                </div>
+            </section>
+            <div class="divider"></div>
+        </main>
+
+        <!-- Footer section -->
+        <footer>
+            <div class="footer__item">
+                <img
+                    src="images/graphics/ic_check_black.svg"
+                    alt="Checkmark"
+                    class="check"
+                />
+                <p class="footer__detail-text">
+                    30 day free returns and exchange
+                </p>
+            </div>
+            <div class="footer__item">
+                <img
+                    src="images/graphics/ic_check_black.svg"
+                    alt="Checkmark"
+                    class="check"
+                />
+                <p class="footer__detail-text">
+                    Free shipping (5–7 work days)
+                </p>
+            </div>
+            <div class="footer__item footer__some-holder">
+                <a href="#" class="footer__some">
+                    <img
+                        src="images/graphics/social_facebook.svg"
+                        alt="Facebook logo"
+                    />
+                    <p class="footer__detail-text">Facebook</p>
+                </a>
+                <a href="#" class="footer__some">
+                    <img
+                        src="images/graphics/social_instagram.svg"
+                        alt="Instagram logo"
+                    />
+                    <p class="footer__detail-text">Instagram</p>
+                </a>
+                <a href="#" class="footer__some">
+                    <img
+                        src="images/graphics/social_youtube.svg"
+                        alt="YouTube logo"
+                    />
+                    <p class="footer__detail-text">YouTube</p>
+                </a>
+            </div>
+
+            <div class="footer__categories">
+                <p>Shoe categories</p>
+                <img
+                    src="images/graphics/ic_arrow_down.svg"
+                    alt="Arrow down"
+                    class="arrowDownCat"
+                />
+            </div>
+            <nav class="footer__nav footer__nav--categories">
+                <ul>
+                    <li><a href="categories.html">News</a></li>
+                    <li><a href="categories.html">Boots</a></li>
+                    <li><a href="categories.html">Dress shoes</a></li>
+                    <li><a href="categories.html">Sneakers</a></li>
+                    <li><a href="categories.html">Sandals</a></li>
+                    <li><a href="categories.html">Loafers</a></li>
+                    <li>
+                        <a href="categories.html"
+                            >Clearance <strong>Save 30%</strong></a
+                        >
+                    </li>
+                    <li><a href="categories.html">Brands</a></li>
+                    <li><a href="categories.html">Accessories</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__customer-service">
+                <p>Customer service</p>
+                <img
+                    src="images/graphics/ic_arrow_down.svg"
+                    alt="Arrow down"
+                    class="arrowDownCus"
+                />
+            </div>
+            <nav class="footer__nav footer__nav--customer-service">
+                <ul>
+                    <li><a href="#">Gift Card</a></li>
+                    <li><a href="#">How to order</a></li>
+                    <li><a href="#">Payment</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Returning a product</a></li>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy policies </a></li>
+                    <li><a href="#">All categories</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__item">
+                <a href="mailto:contact@letha.com" class="footer__email"
+                    >contact@letha.com</a
+                >
+                <p class="footer__detail-text">
+                    Please don’t hesitate to contact us – we always stry to
+                    answer your questions within 24 hours on work days.
+                </p>
+            </div>
+            <a href="index.html">
+                <img
+                    src="images/graphics/letha_logo.svg"
+                    alt="Letha shoes logo"
+                    class="footer__logo"
+                />
+            </a>
+            <hr />
+            <address>
+                <p>Letha shoes ltd</p>
+                <p>22 Shoelace Lane, N-2818</p>
+                <p>Footville</p>
+            </address>
+        </footer>
+
+        <!-- Javascript -->
+        <script src="js/script.js"></script>
+        <script src="js/cart.js"></script>
+    </body>
+</html>

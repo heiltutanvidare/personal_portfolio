@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Products | ShoeBox</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header></header>
+
+			<main>
+				<nav class="breadcrumbs"></nav>
+				<!-- Products -->
+				<section class="products">
+					<h2 class="products__title">Our products</h2>
+					<div class="products__search form__field">
+						<label for="productSearch"
+							>Search in title or description</label
+						>
+						<div class="products__search__input">
+							<input
+								type="text"
+								id="productSearch"
+								name="productSearch"
+								placeholder="Enter search term"
+							/>
+							<button class="products__search__clear">
+								&#10005;
+							</button>
+						</div>
+					</div>
+					<div class="message-container"></div>
+					<div class="loader">
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+					</div>
+					<div class="products__container"></div>
+				</section>
+			</main>
+		</div>
+
+		<!-- Footer -->
+		<footer></footer>
+
+		<!-- Javascript -->
+		<script src="js/products.js" type="module"></script>
+	</body>
+</html>

@@ -1,0 +1,73 @@
+@mixin button($bg, $color) {
+	appearance: none;
+	border: none;
+	outline: none;
+	padding: 1em 2em;
+	border-radius: $br-sm;
+	background-color: $bg;
+	color: $color;
+	font-size: 0.85rem;
+	display: inline-block;
+	transition: all $transition-medium;
+	cursor: pointer;
+
+	& + .btn {
+		@media (min-width: $bp-sm) {
+			margin-left: 1rem;
+		}
+	}
+
+	@media (max-width: $bp-sm) {
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: darken($bg, 5%);
+	}
+}
+
+.btn {
+	@include button(getColor(clr-dark), getColor(clr-white));
+
+	&--cta {
+		@include button(getColor(clr-secondary), getColor(clr-white));
+	}
+
+	&--error {
+		@include button(getColor(clr-error), getColor(clr-white));
+	}
+
+	&--delete {
+		margin-top: 1rem;
+		@media (min-width: $bp-sm) {
+			margin-left: auto !important;
+			margin-top: 0;
+		}
+	}
+
+	&--link {
+		background-color: transparent;
+		color: getColor(clr-dark);
+		border: 1px solid getColor(clr-dark);
+		width: auto;
+		text-decoration: none;
+
+		&:hover {
+			color: getColor(clr-white);
+			background-color: getColor(clr-dark);
+		}
+
+		&--hero {
+			border-color: getColor(clr-white);
+			color: getColor(clr-white);
+			background-color: scale-color(getColor(clr-dark), $alpha: -50%);
+
+			&:hover,
+			&:focus {
+				background-color: getColor(clr-dark);
+			}
+		}
+	}
+}

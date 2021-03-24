@@ -1,0 +1,34 @@
+.about {
+	@extend .max-width;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	background: darken(getColor(clr-white), 5%);
+
+	&__text {
+		padding: 5rem 3rem 0 3rem;
+
+		color: lighten(getColor(clr-dark), 10%);
+		display: grid;
+		place-content: center;
+		text-align: center;
+
+		h2 {
+			margin: 0;
+			line-height: 1.2;
+		}
+
+		.btn {
+			width: max-content;
+			margin: 0 auto;
+		}
+	}
+
+	@media (min-width: $bp-md) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		&__text {
+			padding: 5rem;
+		}
+	}
+}

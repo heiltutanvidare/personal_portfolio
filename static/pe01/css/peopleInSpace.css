@@ -1,0 +1,98 @@
+/************** 
+People in space
+***************/
+
+.peopleInSpace-container {
+    margin-top: 2rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.peopleInSpace-container h1 {
+    margin-bottom: 3rem;
+}
+
+.peopleInSpace__blurb {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.numberOfPeople {
+    font-size: 6.7rem;
+    font-weight: 900;
+    color: var(--clr-green-light);
+    margin: 0;
+    line-height: 1;
+}
+
+@supports (-webkit-text-stroke: 3px var(--clr-green-light)) {
+    .numberOfPeople {
+        -webkit-text-stroke: 3px var(--clr-green-light);
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.astronauts {
+    padding-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.astronaut {
+    margin: 1rem;
+}
+
+.astronaut i {
+    font-size: 2rem;
+    color: var(--clr-white);
+}
+
+.astronaut p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.astronaut__name {
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.loader {
+    height: 4rem;
+    width: 4rem;
+    border: 0.75rem solid var(--clr-green-light);
+    border-top: 0.75rem solid var(--clr-green);
+    border-radius: 50%;
+    margin: 1rem auto;
+    animation: rotateLoader 2s linear infinite;
+}
+
+@keyframes rotateLoader {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/************** 
+Media queries
+***************/
+
+@media screen and (min-width: 45em) {
+    .astronaut p {
+        font-size: 1.25rem;
+    }
+
+    .astronaut {
+        margin: 4rem 2rem;
+    }
+
+    .numberOfPeople {
+        font-size: 8rem;
+    }
+}

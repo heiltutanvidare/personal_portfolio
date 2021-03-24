@@ -1,0 +1,97 @@
+/************** 
+Astronomy picture of the day
+***************/
+
+.apod {
+    margin: 4rem 0;
+    overflow: hidden;
+}
+
+.apod h2 {
+    line-height: 1.2;
+}
+
+.apod h2 span {
+    display: block;
+}
+
+.apod__img-container {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.hasIframe {
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625)*/
+    position: relative;
+}
+
+.apod iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.apod__title {
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+}
+
+.apod__credits {
+    line-height: 1.25;
+}
+
+.apod__date {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/************** 
+Media queries
+***************/
+
+@media screen and (min-width: 45em) {
+    .apod {
+        margin-top: 11rem;
+    }
+
+    .apod__intro {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .apod__intro * {
+        max-width: 68ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .apod__text {
+        padding-top: 4rem;
+        display: grid;
+        grid-template-columns: minmax(15rem, 1fr) auto;
+        grid-gap: 2rem;
+        position: relative;
+    }
+
+    .apod__title-container {
+        text-align: right;
+    }
+
+    .apod__date {
+        margin-top: 0.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .apod__caption {
+        border-left: 1px solid var(--clr-white);
+        padding-left: 2rem;
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+    /* Colors */
+    --clr-danger: #ff8800;
+    --clr-red: #c00000;
+    --clr-cream: #f0efe0;
+    --clr-space-grey: #bdbdbd;
+    --clr-dark-grey: #272626;
+    --clr-green: #0c574e;
+    --clr-green-light: #00c4ad;
+    --clr-green-dark: #000f0d;
+    --clr-green-semi: #00302b;
+    --clr-black: rgb(12, 12, 12);
+    --clr-black--trans: rgba(12, 12, 12, 0);
+    --clr-white: #fff;
+
+    /* Max-width settings */
+    --maxWidth: 960px;
+    --maxWidth--extra: 1280px;
+    --maxWidth--read: 75ch;
+
+    /* Font sizes */
+    --fs-mobile: 14px;
+    --fs-desktop: 16px;
+
+    /* Transition speeds and timing funcitons */
+    --speed-fast: 0.125s cubic-bezier(0.9, 0.5, 0.63, 1.48);
+    --speed-medium: 0.4s cubic-bezier(0.9, 0.5, 0.63, 1.48);
+    --speed-slow: 1s cubic-bezier(0.9, 0.5, 0.63, 1.48);
+}

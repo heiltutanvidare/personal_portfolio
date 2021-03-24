@@ -1,0 +1,120 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__overlay,
+.hero__overlay--short {
+    background: linear-gradient(
+        to bottom,
+        var(--clr-black--trans),
+        var(--clr-black)
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero__overlay--toTop {
+    background: linear-gradient(
+        to top,
+        var(--clr-black--trans),
+        var(--clr-black)
+    );
+    position: absolute;
+    top: 0%;
+    right: 0;
+    bottom: 85%;
+    left: 0;
+}
+
+.hero__overlay--short {
+    top: 40%;
+    margin-bottom: -2px;
+}
+
+.hero--homepage {
+    background: url(../img/photos/hero.jpg) center / cover no-repeat;
+    justify-content: space-between;
+    padding: 8rem 1rem;
+    position: relative;
+}
+
+.hero--solarsystem {
+    justify-content: center;
+}
+
+.hero--peopleInSpace {
+    background: url(../img/photos/astronauts/sunrise_atmos.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    padding-top: 6rem;
+    min-height: unset;
+    margin-bottom: 4rem;
+}
+
+.hero--spaceflight {
+    /* background: url(../img/photos/about/outer_atmos.png) no-repeat; */
+    background: url(../img/photos/astronauts/sunrise_atmos.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    padding-top: 8rem;
+    justify-content: center;
+}
+
+.hero--mars {
+    background: url(../img/photos/weather_on_mars/mars_south_pole.jpg) no-repeat;
+    background-size: 150%;
+    background-position: top center;
+    position: relative;
+    justify-content: flex-end;
+    padding: 8rem 0 0 0;
+}
+
+.hero--launches {
+    background: url(../img/photos/launches/liftoff.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    justify-content: flex-end;
+    padding: 11rem 3rem;
+}
+
+.hero h1 {
+    /* opacity: 0;
+    transform: translateY(75px);
+    animation: fadeUp 1s ease-out forwards; */
+}
+
+@keyframes fadeUp {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 45em) {
+    .hero--homepage {
+        padding: calc(7vh + 8rem) 2rem 8rem 2rem;
+    }
+
+    .hero--mars {
+        background-size: contain;
+    }
+
+    .hero--peopleInSpace {
+        padding-top: 10rem;
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .hero--peopleInSpace {
+        padding-top: 16rem;
+    }
+}

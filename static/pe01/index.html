@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="The definitive destination for all your space related news and information, like launch calendar, Mars weather and Astronomy picture of the day"
+        />
+        <title>SpaceX | To infinity and beyond</title>
+        <link rel="stylesheet" href="https://use.typekit.net/bmg2lej.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+    </head>
+    <body>
+        <!-- Overlaid animation on pageload -->
+        <!-- <div class="overlay">
+            <div class="overlay__part"></div>
+            <div class="overlay__part"></div>
+            <div class="overlay__part"></div>
+        </div> -->
+        <!-- Header section is fixed and will follow the user when scrolling -->
+        <header>
+            <div class="header__inner">
+                <a href="index.html">
+                    <img
+                        class="logo"
+                        src="img/graphics/logo_white.svg"
+                        alt="SpaceX logo"
+                    />
+                </a>
+                <div
+                    class="header__inner__burger"
+                    aria-haspopup="true"
+                    aria-label="Collapse or expand the site navigation menu"
+                >
+                    <span class="burger-line burger-line--top"></span>
+                    <span class="burger-line burger-line--middle"></span>
+                    <span class="burger-line burger-line--bottom"></span>
+                </div>
+                <nav class="">
+                    <ul class="header__nav">
+                        <li>
+                            <a
+                                class="header__nav__link active__page"
+                                href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header__nav__link" href="about.html"
+                                >About us</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header__nav__link" href="launches.html"
+                                >Launches</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header__nav__link" href="astronauts.html"
+                                >Who's in space</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header__nav__link" href="mars.html"
+                                >Mars weather</a
+                            >
+                        </li>
+                        <li>
+                            <a class="header__nav__link" href="solarsystem.html"
+                                >Our solar system</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="overflowXhidden">
+            <!-- Hero section with countdown to next launch -->
+            <div class="hero hero--homepage">
+                <div class="hero__overlay--short"></div>
+                <div class="site__intro">
+                    <h1>
+                        <span>&nbsp;To infinity</span
+                        ><span>&nbsp;and beyond</span>
+                    </h1>
+                    <p class="blurb">
+                        The definitive destination for all your space related
+                        news and information needs
+                    </p>
+                </div>
+                <div class="nextLaunch">
+                    <div class="nextLaunch-container">
+                        <p class="nextLaunch__title">Next launch</p>
+                        <div id="counter">
+                            <p class="loading">Loading…</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer-line"></div>
+            <div class="spacer-line--end"></div>
+
+            <!-- SpaceX – Who we are & what we do-->
+            <section class="about">
+                <div class="max-width">
+                    <h2>Making humanity <span>multiplanitary</span></h2>
+                    <p>
+                        SpaceX designs, manufactures and launches advanced
+                        rockets and spacecrafts. The company was founded in 2002
+                        to revolutionize space technology, with the ultimate
+                        goal of enabling people to live on other planets.
+                    </p>
+                    <a href="about.html" class="btn btn--primary">Learn more</a>
+                </div>
+            </section>
+
+            <!-- News from spacenews API-->
+            <section class="news">
+                <h2 class="news__title">Latest news</h2>
+                <div class="loader news__loader"></div>
+                <div class="news__error__container"></div>
+                <div class="news__container"></div>
+            </section>
+
+            <!-- Feature cards -->
+            <section class="feature__cards">
+                <div class="feature__card feature__card--launches">
+                    <i class="fas fa-rocket feature__card__icon"></i>
+                    <div class="feature__card__text">
+                        <h2 class="feature__card__title">Upcoming launches</h2>
+                        <p class="feature__card__blurb">
+                            Get an updated and detailed overview of all past and
+                            upcoming space launches.
+                        </p>
+                        <a href="launches.html" class="btn btn--primary"
+                            >See launches</a
+                        >
+                    </div>
+                </div>
+
+                <div class="feature__card feature__card--mars">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Layer_1"
+                        x="0"
+                        y="0"
+                        version="1.1"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                    >
+                        <defs />
+                        <style>
+                            .st0 {
+                                fill: #fff;
+                            }
+                        </style>
+                        <path
+                            id="satelite"
+                            d="M267.9 467.2c6.4 6.3 5.4 17.4-2.6 21.7-67.4 36.3-153.3 25.9-210.2-31-56.9-56.9-67.2-142.7-31-210.1 4.2-7.9 15.3-8.9 21.7-2.6l101.3 101.3 23.8-23.8c-.6-2.3-1.4-4.3-1.4-6.8 0-15.3 12.4-27.8 27.8-27.8 15.3 0 27.8 12.4 27.8 27.8 0 15.3-12.4 27.8-27.8 27.8-2.4 0-4.5-.8-6.8-1.4L166.7 366l101.2 101.2z"
+                            class="st0"
+                        />
+                        <path
+                            id="wave1"
+                            d="M363.7 328.6c.5 7.7-5.3 14.4-13.1 15H321.8c-7.2-.1-13.2-5.6-13.8-12.8-6-66.8-59-120.5-125.6-125.9-7.2-.5-12.8-6.5-12.8-13.8v-27.8c0-7.7 6.3-14 14-14h1c95.4 7.4 171.8 83.8 179.1 179.3z"
+                            class="st0"
+                        />
+                        <path
+                            id="wave2"
+                            d="M447 328.8c.4 7.7-5.5 14.3-13.2 14.7h-28.5c-7.3 0-13.3-5.7-13.8-13C385 218.2 294.8 127.1 182.6 121c-7.3-.4-13-6.5-13-13.8V79.9c0-7.7 6.3-13.9 14-13.9h.7C325.8 73.5 439.6 187.3 447 328.8z"
+                            class="st0"
+                        />
+                    </svg>
+                    <div class="feature__card__text">
+                        <h2 class="feature__card__title">
+                            Latest report from Mars
+                        </h2>
+                        <p class="feature__card__blurb">
+                            Get an updated weather report from the surface of
+                            Mars at Elysium Planitia near Mars’ equator.
+                        </p>
+                        <a href="mars.html" class="btn btn--primary"
+                            >Weather report</a
+                        >
+                    </div>
+                </div>
+
+                <div class="feature__card feature__card--astronauts">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="Astronaut_Layer_1"
+                        x="0"
+                        y="0"
+                        version="1.1"
+                        viewBox="0 0 448 512"
+                        xml:space="preserve"
+                    >
+                        <defs />
+                        <style>
+                            .st0 {
+                                fill: #fff;
+                            }
+                        </style>
+                        <path
+                            d="M327.6 321.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"
+                            class="st0"
+                        />
+                        <g id="head">
+                            <path
+                                d="M384 96h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16zm-40 64c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24z"
+                                class="st0"
+                            />
+                            <path
+                                d="M176 208l12-36 36-12-36-12-12-36-12 36-36 12 36 12z"
+                                class="st0"
+                            />
+                        </g>
+                    </svg>
+                    <div class="feature__card__text">
+                        <h2 class="feature__card__title">Who's out there?</h2>
+                        <p class="feature__card__blurb">
+                            Are you wondering just how many astronauts are in
+                            space right now, and who they might be?
+                        </p>
+                        <a href="astronauts.html" class="btn btn--primary"
+                            >Find out</a
+                        >
+                    </div>
+                </div>
+
+                <div class="feature__card feature__card--solarsystem">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="solarsystem_Layer_1"
+                        x="0"
+                        y="0"
+                        version="1.1"
+                        viewBox="0 0 100 100"
+                        xml:space="preserve"
+                    >
+                        <defs />
+                        <style>
+                            .st0 {
+                                fill: #fff;
+                            }
+                        </style>
+                        <circle id="sun" cx="50" cy="50" r="7.1" class="st0" />
+                        <path
+                            id="planet03"
+                            d="M50 1.2c-9.8 0-19 2.9-26.7 7.9-1.1-.9-2.4-1.4-3.9-1.4-3.3 0-6 2.7-6 6 0 1.1.3 2.2.8 3.1-8.1 8.7-13 20.3-13 33.2C1.2 77 23 98.8 50 98.8S98.8 77 98.8 50 77 1.2 50 1.2zm0 94.6C24.7 95.8 4.2 75.3 4.2 50c0-12 4.7-23 12.2-31.1.9.5 1.9.8 3 .8 3.3 0 6-2.7 6-6 0-.7-.1-1.4-.4-2.1 7.2-4.7 15.8-7.4 25-7.4 25.3 0 45.8 20.6 45.8 45.8S75.3 95.8 50 95.8z"
+                            class="st0"
+                        />
+                        <path
+                            id="planet02"
+                            d="M50 14.6c-19.5 0-35.4 15.8-35.4 35.4 0 11.5 5.5 21.7 14 28.2-.2.5-.3 1.1-.3 1.7 0 3.3 2.7 6 6 6 1.9 0 3.6-.9 4.7-2.3 3.4 1.1 7.1 1.7 10.9 1.7 19.5 0 35.4-15.8 35.4-35.4.1-19.4-15.8-35.3-35.3-35.3zm0 67.8c-3.4 0-6.6-.5-9.7-1.5.1-.3.1-.6.1-1 0-3.3-2.7-6-6-6-1.6 0-3.1.6-4.2 1.7-7.6-5.9-12.6-15.2-12.6-25.6 0-17.8 14.5-32.4 32.4-32.4S82.4 32.2 82.4 50c0 17.8-14.6 32.4-32.4 32.4z"
+                            class="st0"
+                        />
+                        <path
+                            id="planet01"
+                            d="M71.1 51.1c0-.4.1-.8.1-1.1 0-11.7-9.5-21.1-21.1-21.1S28.9 38.3 28.9 50 38.3 71.1 50 71.1c7 0 13.2-3.4 17.1-8.7.5.1 1 .2 1.5.2 3.3 0 6-2.7 6-6 0-2.4-1.5-4.5-3.5-5.5zM50 68.1C40 68.1 31.9 60 31.9 50S40 31.9 50 31.9 68.1 40 68.1 50v.6c-3.1.3-5.5 2.8-5.5 6 0 1.7.7 3.2 1.8 4.3-3.3 4.4-8.5 7.2-14.4 7.2z"
+                            class="st0"
+                        />
+                    </svg>
+
+                    <div class="feature__card__text">
+                        <h2 class="feature__card__title">Our solar system</h2>
+                        <p class="feature__card__blurb">
+                            There are many planetary systems like ours in the
+                            universe, with planets orbiting a host star.
+                        </p>
+                        <a href="solarsystem.html" class="btn btn--primary"
+                            >Come explore</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Astronomy Picture of the Day -->
+            <section class="apod">
+                <div class="apod__intro max-width">
+                    <h2>
+                        <span>Astronomy picture</span> <span>of the day</span>
+                    </h2>
+                    <p class="apod__blurb">
+                        Each day a different image or photograph of our
+                        fascinating universe is featured, along with a brief
+                        explanation written by a professional astronomer.
+                    </p>
+                    <div class="apod-loader">Loading APOD…</div>
+                    <div class="apod-error-container"></div>
+                </div>
+
+                <div class="apod__container max-width"></div>
+            </section>
+
+            <!-- Quote from Elon Musk -->
+            <section class="quote__elon">
+                <picture class="about__img">
+                    <source
+                        media="(max-width: 639px)"
+                        srcset="img/photos/starship_480w.png"
+                    />
+                    <source
+                        media="(max-width: 719px)"
+                        srcset="img/photos/starship_640w.png"
+                    />
+                    <source
+                        media="(max-width: 959px)"
+                        srcset="img/photos/starship_720w.png"
+                    />
+                    <source
+                        media="(max-width: 1499px)"
+                        srcset="img/photos/starship_960w.png"
+                    />
+                    <source
+                        media="(min-width: 1500px)"
+                        srcset="img/photos/starship_1500w.png"
+                    />
+                    <img
+                        src="img/photos/starship_960w.png"
+                        alt="SpaceX’s Starship spacecraft and Super Heavy rocket (collectively referred to as Starship)."
+                    />
+                </picture>
+                <blockquote class="max-width">
+                    <p>
+                        You want to wake up in the morning and think the future
+                        is going to be great – and that’s what being a
+                        spacefaring civilization is all about. It’s about
+                        believing in the future and thinking that the future
+                        will be better than the past. And I can’t think of
+                        anything more exciting than going out there and being
+                        among the stars.
+                    </p>
+                    <cite>Elon Musk</cite>
+                </blockquote>
+                <div class="spacer-line"></div>
+                <div class="spacer-line--end"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <div class="clouds-container">
+            <svg
+                class="clouds"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1900 350.9"
+            >
+                <defs />
+                <path
+                    id="clouds_rear"
+                    fill="#fff"
+                    d="M1931.8 104.4c-1.1-22.9-20-41.2-43.2-41.2-8.5 0-16.3 2.4-23 6.6-8.7-12.7-23.3-21.1-39.9-21.1-14 0-26.6 5.9-35.4 15.4-4.5-2.3-9.6-3.6-15-3.6-8.3 0-15.9 3-21.8 8 .1-1.1.1-2.2.1-3.3 0-24.5-19.8-44.3-44.3-44.3-22.9 0-41.7 17.4-44 39.7-4.6-2.1-9.6-3.2-15-3.2-9.8 0-18.6 3.8-25.2 10.1-5.6-12.8-18.4-21.8-33.3-21.8-9.7 0-18.5 3.8-25.1 10-5.1-6.8-13.2-11.2-22.4-11.2-4.8 0-9.2 1.2-13.2 3.3-8.4-14-23.7-23.4-41.2-23.4-19.5 0-36.2 11.6-43.8 28.2-7.2-3.9-15.5-6.2-24.3-6.2-17.9 0-33.6 9.3-42.7 23.3-2.8-.7-5.8-1.1-8.9-1.1-9 0-17.3 3.3-23.6 8.8.2-1.6.3-3.3.3-4.9 0-23.9-19.4-43.3-43.3-43.3-23 0-41.9 18-43.2 40.7-4.4-3.1-9.8-4.9-15.7-4.9-9.3 0-17.6 4.6-22.5 11.7-11.4-18.7-31.9-31.1-55.4-31.1-15 0-28.8 5.1-39.8 13.6-7.3-16-23.4-27.1-42.1-27.1-19.6 0-36.3 12.2-43 29.4-7.6-4.7-16.6-7.5-26.3-7.5-26.9 0-48.9 21.3-50 48-1.7-21.7-20.2-39-42.8-39-8.5 0-16.3 2.4-23 6.6-8.7-12.7-23.3-21.1-39.9-21.1-14 0-26.6 5.9-35.4 15.4-4.5-2.3-9.6-3.6-15-3.6-8.3 0-15.9 3-21.8 8 .1-1.1.1-2.2.1-3.3 0-24.5-19.8-44.3-44.3-44.3-22.9 0-41.7 17.4-44 39.7-4.6-2.1-9.6-3.2-15-3.2-9.8 0-18.6 3.8-25.2 10.1-5.6-12.8-18.4-21.8-33.3-21.8-9.7 0-18.5 3.8-25.1 10-5.1-6.8-13.2-11.2-22.4-11.2-4.8 0-9.2 1.2-13.2 3.3-8.4-14-23.7-23.4-41.2-23.4-19.5 0-36.2 11.6-43.8 28.2-7.2-3.9-15.5-6.2-24.3-6.2-17.9 0-33.6 9.3-42.7 23.3-2.8-.7-5.8-1.1-8.9-1.1-9 0-17.3 3.3-23.6 8.8.2-1.6.3-3.3.3-4.9 0-23.9-19.4-43.3-43.3-43.3-23 0-41.9 18-43.2 40.7-4.4-3.1-9.8-4.9-15.7-4.9-9.3 0-17.6 4.6-22.5 11.7C245 57.8 224.5 45.4 201 45.4c-15 0-28.8 5.1-39.8 13.6-7.3-16-23.4-27.1-42.1-27.1-19.6 0-36.3 12.2-43 29.4-7.6-4.7-16.6-7.5-26.3-7.5-27.6 0-50 22.4-50 50v216.7h965.8v.3h966l.2-216.4z"
+                    opacity=".5"
+                />
+                <path
+                    id="clouds_front"
+                    fill="#fff"
+                    d="M1902.2 200.9c1-4.8 1.5-9.9 1.5-15 0-40.7-33-73.7-73.7-73.7-29.4 0-54.8 17.3-66.6 42.2-14.4-26.7-42.6-44.8-75.1-44.8-22.2 0-42.5 8.5-57.7 22.5-7.1-2.3-14.6-3.6-22.5-3.6-15.5 0-29.8 4.9-41.5 13.3.2-2 .3-4.1.3-6.1 0-39.4-31.9-71.3-71.3-71.3-37.4 0-68.1 28.8-71.1 65.4-7.8-3.4-16.5-5.3-25.6-5.3-15.6 0-30 5.6-41.1 15-10.9-20.7-32.6-34.9-57.6-34.9-24.1 0-45.1 13.1-56.3 32.5-7.4-6.9-17.3-11.1-28.2-11.1-1.9 0-3.8.1-5.7.4-9.6-32.6-39.7-56.3-75.3-56.3-32.1 0-59.7 19.3-71.8 46.8-12.4-7.2-26.9-11.3-42.3-11.3-28.2 0-53.2 13.9-68.5 35.1-13.5-17.3-34.5-28.4-58.1-28.4-29.4 0-54.8 17.3-66.6 42.2-14.4-26.7-42.6-44.8-75.1-44.8-22.2 0-42.5 8.5-57.7 22.5-7.1-2.3-14.6-3.6-22.5-3.6-15.5 0-29.8 4.9-41.5 13.3.2-2 .3-4.1.3-6.1 0-39.4-31.9-71.3-71.3-71.3-37.4 0-68.1 28.8-71.1 65.4-7.8-3.4-16.5-5.3-25.6-5.3-15.6 0-30 5.6-41.1 15-10.9-20.7-32.6-34.9-57.6-34.9-24.1 0-45.1 13.1-56.3 32.5-7.4-6.9-17.3-11.1-28.2-11.1-1.9 0-3.8.1-5.7.4-9.8-32.8-39.9-56.5-75.5-56.5-32.1 0-59.7 19.3-71.8 46.8-12.4-7.2-26.9-11.3-42.3-11.3-46.6 0-84.4 37.8-84.4 84.4v161.2h1903.7v-105h-1.5v-45.2z"
+                />
+            </svg>
+        </div>
+        <footer>
+            <div class="pre-footer">
+                <div class="spacer-line"></div>
+                <div class="spacer-line--end"></div>
+                <section class="quote__neil">
+                    <blockquote>
+                        <p>
+                            I didn't feel like a giant. I felt very, very small.
+                        </p>
+                        <cite>Neil Armstrong</cite>
+                    </blockquote>
+                </section>
+            </div>
+
+            <div class="main-footer">
+                <div class="footer__field">
+                    <h4>Our pages</h4>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="launches.html">Next launches</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="mars.html">Mars weather</a>
+                        </li>
+                        <li>
+                            <a href="astronauts.html">People in space</a>
+                        </li>
+                        <li>
+                            <a href="solarsystem.html">Our solar system</a>
+                        </li>
+                        <li class="social__container">
+                            <a href="https://twitter.com/spacex"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                            <a href="https://www.youtube.com/spacex"
+                                ><i class="fab fa-youtube"></i
+                            ></a>
+                            <a href="https://www.instagram.com/spacex/"
+                                ><i class="fab fa-instagram"></i
+                            ></a>
+                            <a href="https://www.linkedin.com/company/spacex/"
+                                ><i class="fab fa-linkedin"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__field">
+                    <h4>SpaceX</h4>
+                    <address>
+                        <div>
+                            <p>SpaceX Inc.</p>
+                            <p>401 Rocket Road</p>
+                            <p>Astroville</p>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="tel:999999444999"
+                                    ><i class="fas fa-phone-alt"></i>999 999 444
+                                    999</a
+                                >
+                            </p>
+                            <p>
+                                <a href="mailto:contact@spacex.com"
+                                    ><i class="fas fa-envelope"></i
+                                    >contact@spacex.com</a
+                                >
+                            </p>
+                            <p>
+                                <a href="https://www.spacex.com"
+                                    ><i class="fas fa-globe"></i
+                                    >www.spacex.com</a
+                                >
+                            </p>
+                        </div>
+                    </address>
+                </div>
+
+                <div class="footer__field">
+                    <h4>Newsletter</h4>
+                    <form action="post" class="footer__newsletter">
+                        <div class="footer__newsletter__field">
+                            <input
+                                type="email"
+                                name="newsletterEmail"
+                                id="newsletterEmail"
+                                placeholder="Enter your email address"
+                                required
+                            />
+                            <input
+                                class="btn btn--primary"
+                                type="submit"
+                                value="Sign up"
+                                id="newsletterSubmit"
+                            />
+                        </div>
+                        <div class="newsletter__signup__msg">
+                            <p class="newsletter__signup__msg--success">
+                                Thank you for signing up!
+                            </p>
+                            <p class="newsletter__signup__msg--failure">
+                                Please enter a valid email address
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <p class="footer__acknowledge">
+                This site has been designed and developed by student Vidar
+                Håland as the submission for his first year exam. Images and
+                content have been collected from different sources such as
+                SpaceX.com, Nasa.gov, Unsplash.com and Pixabay.com. Dynamic
+                content from several APIs.
+            </p>
+        </footer>
+
+        <!-- Javascript below this line -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/headerScroll.js"></script>
+        <script src="js/hamburger.js"></script>
+        <script src="js/nextLaunch.js"></script>
+        <script src="js/news.js"></script>
+        <script src="js/apod.js"></script>
+        <script src="js/newsletter.js"></script>
+    </body>
+</html>

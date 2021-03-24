@@ -1,0 +1,16 @@
+.login {
+	@extend .max-width;
+	margin-bottom: 5rem;
+	overflow-x: hidden;
+
+	@media (min-width: $bp-md) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		grid-gap: 2rem;
+
+		&__info {
+			max-width: 40ch;
+		}
+	}
+}

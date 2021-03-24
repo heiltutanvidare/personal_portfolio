@@ -1,0 +1,91 @@
+.form {
+	@media (min-width: $bp-md) {
+		background-color: #fff;
+		padding: 2rem;
+		box-shadow: $box-shadow;
+		border-radius: $br-lg;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+
+		label {
+			font-family: inherit;
+			margin-bottom: 0.25rem;
+			color: lighten(getColor(clr-dark), 20%);
+		}
+		input[type="text"],
+		input[type="password"],
+		input[type="number"],
+		textarea {
+			font-family: inherit;
+			padding: 0.5rem 0.75rem;
+			border: 1px solid lighten(getColor(clr-dark), 50%);
+			font-size: 16px; // To prevent zooming on iOS Safari
+			line-height: 1.618;
+		}
+
+		&--inline {
+			flex-direction: row;
+			align-items: baseline;
+
+			label {
+				margin-right: 0.5rem;
+			}
+
+			input[type="checkbox"] {
+				font-size: 100rem;
+			}
+		}
+	}
+
+	&__btn-row {
+		@media (min-width: $bp-sm) {
+			display: flex;
+		}
+	}
+}
+
+.shake {
+	animation: shake 1s ease-in-out;
+}
+
+$shakeValue: 5px;
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	10% {
+		transform: translateX(-$shakeValue);
+	}
+	20% {
+		transform: translateX($shakeValue);
+	}
+	30% {
+		transform: translateX(-$shakeValue);
+	}
+	40% {
+		transform: translateX($shakeValue);
+	}
+	50% {
+		transform: translateX(-$shakeValue);
+	}
+	60% {
+		transform: translateX($shakeValue);
+	}
+	70% {
+		transform: translateX(-$shakeValue);
+	}
+	80% {
+		transform: translateX($shakeValue);
+	}
+	90% {
+		transform: translateX(-$shakeValue);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}

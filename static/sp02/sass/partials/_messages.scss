@@ -1,0 +1,181 @@
+.message {
+	@extend .max-width;
+	background-color: getColor(clr-dark);
+	color: getColor(clr-white);
+	padding: 0.5em 1em;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+
+	&.error {
+		background-color: getColor(clr-error);
+		color: getColor(clr-white);
+	}
+
+	&.warning {
+		background-color: getColor(clr-warning);
+		color: getColor(clr-dark);
+	}
+
+	&.success {
+		background-color: getColor(clr-secondary);
+		color: getColor(clr-white);
+	}
+
+	&.loading {
+		background-color: getColor(clr-primary);
+		color: getColor(clr-white);
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+form {
+	.message {
+		background-color: transparent;
+		margin: 0.25rem 0 0 0;
+		color: unset;
+		padding: 0 0 0 1rem;
+		font-size: 0.85rem;
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: "";
+			left: 2px;
+			top: 2px;
+			width: 0.5rem;
+			height: 0.5rem;
+			border-left: 1.5px solid;
+			border-bottom: 1.5px solid;
+			border-color: getColor(clr-dark);
+		}
+
+		&.error {
+			background-color: transparent;
+			color: getColor(clr-error);
+
+			&::after {
+				border-color: getColor(clr-error);
+			}
+		}
+
+		&.warning {
+			background-color: transparent;
+			color: getColor(clr-warning);
+
+			&::after {
+				border-color: getColor(clr-warning);
+			}
+		}
+
+		&.success {
+			background-color: transparent;
+			color: getColor(clr-secondary);
+
+			&::after {
+				border-color: getColor(clr-secondary);
+			}
+		}
+	}
+}
+
+.header-message-container {
+	.message {
+		text-align: center;
+		padding-top: 1rem;
+		padding: 1rem 0.5rem;
+		position: relative;
+		margin-top: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: getColor(clr-secondary);
+			border-radius: 100%;
+			opacity: 0;
+			transform: scale(1);
+			pointer-events: none;
+		}
+	}
+}
+
+.header-message-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	transform: translateY(var(--header-height));
+	opacity: 1;
+	transition: opacity 1s ease;
+
+	&.fadout {
+		opacity: 0;
+	}
+
+	.message {
+		max-width: 100%;
+		&::after {
+			animation: ping $transition-slow;
+		}
+
+		@keyframes ping {
+			from {
+				opacity: 1;
+				transform: scale(2);
+			}
+			to {
+				opacity: 0;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.full-page-message-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(getColor(clr-dark), 0.85);
+	display: none; // set to display flex in javascript when needed
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	.full-page-message {
+		background: getColor(clr-white);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 3em;
+
+		h3 {
+			border-bottom: 1px solid darken(getColor(clr-white), 10%);
+			padding-bottom: 0.5em;
+		}
+
+		p {
+			margin: 0 0 0.5em 0;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		@media (max-width: $bp-md) {
+			padding: 1em 3em;
+
+			a {
+				display: block;
+			}
+		}
+	}
+}

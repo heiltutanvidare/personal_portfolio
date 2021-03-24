@@ -1,0 +1,16 @@
+// Breadcrumb navigation
+.breadcrumbs {
+	@extend .max-width;
+	padding-top: 1rem;
+	margin-bottom: 1rem;
+
+	@media (min-width: $bp-md) {
+		margin-bottom: 3rem;
+	}
+
+	* {
+		color: inherit;
+		margin-right: 0.25rem;
+		display: inline;
+	}
+}

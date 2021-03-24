@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit product | ShowBox</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="full-page-message-container"></div>
+		<div class="wrapper">
+			<header></header>
+			<main>
+				<nav class="breadcrumbs"></nav>
+				<section class="edit-product max-width">
+					<h1>Edit the product</h1>
+					<div class="message-container"></div>
+					<div class="loader">
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+					</div>
+					<form action="POST" class="form edit__form">
+						<div class="form__field">
+							<label for="title">Product title</label>
+							<input
+								type="text"
+								id="title"
+								placeholder="Product title"
+							/>
+							<div class="title-message"></div>
+						</div>
+						<div class="form__field">
+							<label for="title">Product price</label>
+							<input
+								type="number"
+								step=".01"
+								id="price"
+								placeholder="Product price"
+							/>
+						</div>
+						<div class="price-message"></div>
+						<div class="form__field">
+							<label for="title">Description</label>
+							<textarea
+								name="description"
+								id="description"
+								cols="30"
+								rows="10"
+								placeholder="Product description"
+							></textarea>
+							<div class="description-message"></div>
+						</div>
+						<div class="form__field form__field--inline">
+							<label for="featured">Featured product?</label>
+							<input
+								type="checkbox"
+								name="featured"
+								id="featured"
+							/>
+						</div>
+						<div class="form__field">
+							<label for="image">Replace image</label>
+							<input
+								type="file"
+								name="imageInput"
+								id="imageInput"
+							/>
+						</div>
+						<div class="form__btn-row">
+							<input
+								type="submit"
+								value="Update product"
+								class="btn btn--cta"
+							/>
+							<button type="button" id="exitFromEdit" class="btn">
+								Exit
+							</button>
+							<button
+								type="button"
+								class="btn btn--error btn--delete"
+							>
+								Delete product
+							</button>
+						</div>
+					</form>
+				</section>
+			</main>
+		</div>
+		<footer></footer>
+		<script src="js/edit.js" type="module"></script>
+	</body>
+</html>

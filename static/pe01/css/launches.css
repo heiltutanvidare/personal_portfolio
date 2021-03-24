@@ -1,0 +1,142 @@
+.launches__title {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+/************** 
+Upcoming launches page
+***************/
+
+.launches {
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.launches a {
+    margin-top: 2rem;
+}
+
+.launches__grid__title-container img {
+    margin-bottom: 3rem;
+}
+
+.launch {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--clr-dark-grey);
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-gap: 2rem;
+}
+
+.launch:first-of-type {
+    padding-top: 0;
+}
+
+.launch__date-box {
+    border: 1px solid var(--clr-white);
+    padding: 1rem 1rem 0.75rem 1rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.launch__day,
+.launch__month {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+
+.launch__day {
+    font-size: 1.75rem;
+}
+
+.launch__month {
+    font-size: 0.85rem;
+}
+
+.launch__year {
+    font-size: 0.85rem;
+    margin: 0.25rem 0 0 0;
+    opacity: 0.75;
+}
+
+.launch h3 {
+    font-weight: 400;
+}
+
+.launch__description {
+    margin-bottom: 0;
+    max-width: 48ch;
+}
+
+.launch__link {
+    display: block;
+    margin-top: 1rem;
+    color: var(--clr-white);
+    transition: 0.25s ease-out;
+}
+
+.launch__link:hover {
+    color: var(--clr-white);
+    opacity: 0.5;
+}
+
+/************** 
+Filter launches inputs
+***************/
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--clr-dark-grey);
+    margin-bottom: 1rem;
+}
+
+/************** 
+Media queries
+***************/
+
+@media screen and (min-width: 45em) {
+    .launches__title {
+        margin: 0 0 2rem 0;
+        text-align: left;
+    }
+
+    .launches {
+        margin-top: 12rem;
+    }
+    .feature__launches {
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+    }
+
+    .feature__launches__grid {
+        margin-bottom: 3rem;
+    }
+
+    .feature__launches__grid h2 {
+        padding-right: 4rem;
+        border-right: 1px solid var(--clr-space-grey);
+        margin: 0;
+        text-align: right;
+    }
+
+    .feature__launches__grid,
+    .launches__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+        position: relative;
+    }
+
+    .launches__grid__title-container {
+        margin-top: 0.85rem;
+        position: sticky;
+        top: 8rem;
+        align-self: start;
+    }
+}

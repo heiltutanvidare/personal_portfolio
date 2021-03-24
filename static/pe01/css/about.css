@@ -1,0 +1,237 @@
+/************** 
+About us page
+***************/
+
+.hero--spaceflight__inner {
+    z-index: 1;
+    overflow: hidden;
+}
+
+.spaceflight__title-container {
+    min-height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/photos/about/astronaut.png) center / contain
+        no-repeat;
+}
+
+.spaceflight__title-container h1 {
+    margin-top: -1rem;
+    border: 2px solid var(--clr-green);
+    background-color: #00302baf;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.spaceflight__title-container h1::before,
+.spaceflight__title-container h1::after {
+    content: "";
+    position: absolute;
+    top: -25%;
+    right: -0.75rem;
+    border: 1px solid var(--clr-green);
+    border-radius: 50%;
+}
+
+.spaceflight__title-container h1::after {
+    width: 3rem;
+    height: 3rem;
+    transform-origin: center;
+    animation: pulse_large 1s linear infinite;
+}
+
+.spaceflight__title-container h1::before {
+    width: 3rem;
+    height: 3rem;
+    animation: pulse 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse_large {
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/************** 
+About topics
+***************/
+
+.about__topics {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-gap: 2rem;
+}
+
+.about__topic {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 48ch;
+}
+
+.about__topic i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/************** 
+Number info
+***************/
+
+.about__numbers {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.numbers__bg {
+    background: url(../img/photos/about/rocket_launch.jpg) center / cover
+        no-repeat;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.number__container {
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+    max-width: 700px;
+}
+
+.number__item {
+    margin-bottom: 4rem;
+}
+
+.number__item--spacer {
+    height: 100vh;
+    margin-bottom: 0;
+}
+
+.number__item .number {
+    font-size: 4.45rem;
+    line-height: 1;
+    font-family: nasalization, sans-serif;
+    margin: 0;
+    color: var(--clr-white);
+}
+
+.number__description {
+    margin: 0;
+}
+
+.history {
+    margin-top: 5rem;
+}
+
+/************** 
+Falcon 9 section
+***************/
+
+.falcon__img {
+    margin-bottom: 2rem;
+}
+
+/************** 
+Moon section
+***************/
+
+.moon {
+    margin-top: 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.moon__img {
+    margin-top: -10%;
+    margin-bottom: -40%;
+}
+
+.moon__text {
+    position: relative;
+    z-index: 1;
+}
+
+/************** 
+Media queries
+***************/
+
+@media screen and (min-width: 45em) {
+    .spaceflight__title-container h1 {
+        margin-top: 0.5rem;
+    }
+
+    .spaceflight__title-container h1::before,
+    .spaceflight__title-container h1::after {
+        top: -20%;
+        right: 4.2rem;
+    }
+
+    .hero--spaceflight__inner .blurb {
+        margin-top: 2rem;
+    }
+
+    .about__topics {
+        margin-top: 7rem;
+        margin-bottom: 16rem;
+    }
+
+    .number__item .number {
+        font-size: 5.45rem;
+    }
+
+    .number__description {
+        font-size: 1.25rem;
+    }
+
+    .history {
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .about__topics {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+    }
+}
+
+@media screen and (min-width: 65em) {
+    .moon__text h2,
+    .moon__text h3 {
+        text-align: center;
+    }
+
+    .moon__columns {
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+
+    .moon__text__column--left {
+        text-align: right;
+        border-right: 1px solid var(--clr-space-grey);
+        padding-right: 2rem;
+    }
+
+    .moon__text__column--right {
+        padding-left: 2rem;
+    }
+
+    .moon__text__column--right p:last-of-type {
+        margin-bottom: 0;
+    }
+}

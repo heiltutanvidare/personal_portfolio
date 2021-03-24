@@ -1,0 +1,52 @@
+.testimonials {
+	@extend .max-width;
+	&__row {
+		display: grid;
+		margin-bottom: 3rem;
+
+		@media (min-width: $bp-md) {
+			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 0;
+
+			&--reverse {
+				grid-template-areas: "text image";
+				.testimonial {
+					grid-area: text;
+				}
+				.img {
+					grid-area: image;
+				}
+			}
+		}
+	}
+
+	.testimonial {
+		margin-top: 2rem;
+		@media (min-width: $bp-md) {
+			padding: 15%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		&__text {
+			margin: 1rem auto;
+		}
+
+		&__name {
+			margin: 0;
+			font-size: 0.85rem;
+			color: lighten(getColor(clr-dark), 40%);
+		}
+
+		&__stars {
+			display: flex;
+
+			&__star {
+				@extend .stars-common;
+			}
+		}
+	}
+}

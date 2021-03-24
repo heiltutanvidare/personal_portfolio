@@ -1,0 +1,188 @@
+/************** 
+Mars
+***************/
+
+.mars__weather__intro {
+    padding-top: 8rem;
+    background: url(../img/photos/starbg.jpg) center / cover no-repeat;
+}
+
+.img__overlay--container {
+    position: relative;
+}
+
+.img__overlay--container .hero__overlay {
+    background: linear-gradient(to top, rgba(12, 12, 12, 0), var(--clr-black));
+}
+
+.img__overlay--container img {
+    margin-top: 1px;
+}
+
+/************** 
+Mars weather
+***************/
+
+.mars__weather {
+    text-align: center;
+}
+
+.mars__weather h1 {
+    margin-bottom: 2rem;
+}
+
+.mars__weather h2 {
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mars__weather p {
+    color: var(--clr-cream);
+}
+
+.mars__weather__container {
+    display: grid;
+    grid-column-gap: 1rem;
+}
+
+.mars__weather__display {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.mars__weather__entry:last-of-type {
+    grid-row: 1;
+    border-bottom: 1px solid var(--clr-white);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.mars__weather__date,
+.mars__weather__details {
+    font-size: 1rem;
+}
+
+.mars__weather__details span {
+    font-weight: 700;
+}
+
+.mars__weather__details {
+    margin: 0;
+}
+
+.mars__weather__field {
+    margin-bottom: 2rem;
+}
+
+.mars__weather__entry {
+    margin-bottom: 2rem;
+}
+
+.mars__weather__heading {
+    font-weight: 700;
+    margin: 1rem 0 0 0;
+}
+
+/************** 
+Compass
+***************/
+
+.compass {
+    display: block;
+    position: relative;
+    background-color: var(--clr-dark-grey);
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    height: 1rem;
+    transform: rotate(0);
+    transform-origin: center;
+    width: 4px;
+    background-color: var(--clr-green-light);
+    position: relative;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(25%);
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid var(--clr-green-light);
+    border-left: 0.5rem solid transparent;
+}
+
+.circle  {
+}
+
+/************** 
+Mission overview
+***************/
+
+.mission {
+    position: relative;
+    margin-bottom: -6rem;
+    z-index: -1;
+}
+
+.mission img {
+    margin-bottom: 2rem;
+}
+
+.mission h3 {
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.about--mars {
+    margin-top: 0;
+}
+
+/************** 
+Media queries
+***************/
+
+@media screen and (min-width: 45em) {
+    .mars__weather__intro {
+        padding-top: 15rem;
+    }
+
+    .mars__weather__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mars__weather__entry:last-of-type {
+        grid-column: 1 / -1;
+    }
+
+    .mission__overview {
+        display: grid;
+        grid-template-columns: min-content auto;
+        grid-gap: 4rem;
+        position: relative;
+    }
+
+    .mission__overview h2 {
+        margin-top: 0.85rem;
+        position: sticky;
+        top: 5rem;
+        align-self: start;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .mars__weather__container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

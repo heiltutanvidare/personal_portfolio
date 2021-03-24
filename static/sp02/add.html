@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Add Product | ShowBox</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="full-page-message-container"></div>
+		<div class="wrapper">
+			<header></header>
+			<main>
+				<nav class="breadcrumbs"></nav>
+				<section class="add-product">
+					<h1>Add new product</h1>
+					<div class="message-container"></div>
+					<div class="loader">
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+						<div class="loader__dot"></div>
+					</div>
+					<form action="POST" class="form new-product__form">
+						<div class="form__field">
+							<label for="title">Product title</label>
+							<input
+								type="text"
+								id="title"
+								placeholder="Product title"
+							/>
+							<div class="title-message"></div>
+						</div>
+						<div class="form__field">
+							<label for="title">Product price</label>
+							<input
+								type="number"
+								step=".01"
+								id="price"
+								placeholder="Product price"
+							/>
+							<div class="price-message"></div>
+						</div>
+						<div class="form__field">
+							<label for="title">Product description</label>
+							<textarea
+								name="description"
+								id="description"
+								cols="30"
+								rows="10"
+								placeholder="Product description"
+							></textarea>
+							<div class="description-message"></div>
+						</div>
+						<div class="form__field form__field--inline">
+							<label for="featured">Featured product?</label>
+							<input
+								type="checkbox"
+								name="featured"
+								id="featured"
+							/>
+						</div>
+						<div class="form__field">
+							<label for="imageInput">Product image</label>
+							<input
+								type="file"
+								name="imageInput"
+								id="imageInput"
+							/>
+							<div class="image-message"></div>
+						</div>
+						<input
+							type="submit"
+							value="Add new product"
+							class="btn btn--cta"
+						/>
+						<button type="button" id="exitButton" class="btn">
+							Exit
+						</button>
+					</form>
+				</section>
+			</main>
+		</div>
+		<footer></footer>
+		<script src="js/add.js" type="module"></script>
+	</body>
+</html>
