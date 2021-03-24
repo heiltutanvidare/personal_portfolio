@@ -9,7 +9,7 @@ module.exports = {
     title: "Vidar Håland",
     description:
       "Vidar Håland er nyutdanna FrontEnd-utviklar med bakgrunn som designer i lokalavisa Kvinnheringen.",
-    url: "https://vidarh.netlify.app",
+    url: "https://vidarh.no",
     author: "Vidar Håland",
     image: "/vidar_som_robot.jpg",
     twitterUsername: "@ividaren",
