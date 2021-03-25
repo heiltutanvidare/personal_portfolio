@@ -7,12 +7,22 @@
   color: var(--clr-light);
   margin-top: 3em;
   font-size: var(--fs-base);
+  padding-left: 1em;
 }
 
 .entry {
   color: var(--clr-light-shade);
-  padding: 1em 0;
-  border-bottom: 1px solid var(--clr-tint);
+  padding: 1em;
+  /* padding: 1em 0; */
+  /* border-bottom: 1px solid var(--clr-tint); */
+}
+
+.edu:nth-child(even) {
+  background-color: var(--clr-dark-tint);
+}
+
+.job:nth-child(odd) {
+  background-color: var(--clr-dark-tint);
 }
 
 @media screen and (min-width: 767px) {

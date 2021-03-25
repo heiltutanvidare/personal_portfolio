@@ -33,7 +33,10 @@ const CurricumVitae = () => (
         <h2>Curricum Vitae</h2>
         <h3 className={styles.category}>Utdanning</h3>
         {data.allStrapiEdu.edges.map(edu => (
-          <div key={edu.node.strapiId} className={styles.entry}>
+          <div
+            key={edu.node.strapiId}
+            className={`${styles.entry} ${styles.edu}`}
+          >
             <p>{edu.node.study}</p>
             <p className={styles.timeframe}>{edu.node.timeframe}</p>
             <p className={styles.school}>{edu.node.school}</p>
@@ -42,7 +45,10 @@ const CurricumVitae = () => (
 
         <h3 className={styles.category}>Relevant arbeidserfaring</h3>
         {data.allStrapiJob.edges.map(job => (
-          <div key={job.node.strapiId} className={styles.entry}>
+          <div
+            key={job.node.strapiId}
+            className={`${styles.entry} ${styles.job}`}
+          >
             <p>{job.node.position}</p>
             <p className={styles.timeframe}>{job.node.timeframe}</p>
             <p className={styles.company}>{job.node.company}</p>

@@ -82,13 +82,13 @@ function Bio() {
             Eg håpar å kunne jobbe med – og utvikla meg – innan design og ny
             teknologi i resten av mitt yrkesaktive liv.
           </p>
-          <p>
+          {/* <p>
             Eg bur saman med kjærasten min – Mona – og til hausten skal me to
             bli til tre. Noko me gler oss svært mykje til{" "}
             <span role="img" aria-label="baby emoji">
               👶🏻
             </span>
-          </p>
+          </p> */}
           <p>
             Eg er for tida aktiv jobbsøkjar og tar{" "}
             <Link to="/contact">svært gjerne ein prat.</Link>

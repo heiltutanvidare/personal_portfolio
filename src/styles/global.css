@@ -3,6 +3,7 @@
 :root {
   /* Colors */
   --clr-dark: #14181a;
+  --clr-dark-tint: #1b1f22;
   --clr-dark-shadow: #14181a27;
   --clr-tint: #2c353a;
   --clr-light: #f3f5f6;
