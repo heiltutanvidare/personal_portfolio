@@ -9,7 +9,6 @@ import MainLogo from "./MainLogo"
 export default function Navbar() {
   // Toggle nav menu
   const [navOpen, setNavOpen] = useState(false)
-  console.log(navOpen)
 
   function toggleNav() {
     setNavOpen(!navOpen)

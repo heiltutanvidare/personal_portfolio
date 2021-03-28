@@ -1,4 +1,6 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Hero from "../../components/Hero"
 import * as styles from "../../styles/featuredProjects.module.css"
 import { graphql } from "gatsby"
@@ -9,6 +11,29 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import SEO from "../../components/SEO"
 
 export default function Project({ data }) {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.set(".animProjectCard", {
+      opacity: 0,
+      y: 90,
+    })
+
+    const cards = gsap.utils.toArray(".animProjectCard")
+    cards.forEach(card => {
+      gsap.to(card, {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: card,
+          scrub: 1,
+          toggleActions: "restart pause reverse pause",
+          end: "top center",
+        },
+      })
+    })
+  }, [])
+
   const projects = data.allStrapiProject.nodes
 
   return (
@@ -30,7 +55,10 @@ export default function Project({ data }) {
       </Hero>
       <div className={styles.projectContainer}>
         {projects.map(project => (
-          <div key={project.strapiId} className={styles.projectCard}>
+          <div
+            key={project.strapiId}
+            className={`${styles.projectCard} animProjectCard`}
+          >
             <AniLink
               paintDrip
               to={`/projects/${project.slug}`}
