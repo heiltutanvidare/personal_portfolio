@@ -45,6 +45,10 @@
   margin: 1em 0;
 }
 
+.projectContainer {
+  position: relative;
+}
+
 @media screen and (min-width: 900px) {
   .projectContainer {
     display: grid;
