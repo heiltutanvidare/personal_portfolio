@@ -16,7 +16,7 @@ export default function Project({ data }) {
 
     gsap.set(".animProjectCard", {
       opacity: 0,
-      clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
+      clipPath: "polygon(0 0, 0% 0, 0 100%, 0% 100%)",
     })
 
     const cards = gsap.utils.toArray(".animProjectCard")
@@ -28,6 +28,7 @@ export default function Project({ data }) {
           trigger: card,
           scrub: 1,
           toggleActions: "restart pause reverse pause",
+          start: "top bottom",
           end: "top center",
         },
       })
