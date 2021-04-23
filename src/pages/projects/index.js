@@ -16,8 +16,8 @@ export default function Project({ data }) {
 
     gsap.set(".animProjectCard", {
       opacity: 0,
-      x: -100,
-      y: 100,
+      x: -40,
+      y: 40,
     })
 
     const cards = gsap.utils.toArray(".animProjectCard")
