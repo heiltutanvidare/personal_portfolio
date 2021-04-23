@@ -16,14 +16,16 @@ export default function Project({ data }) {
 
     gsap.set(".animProjectCard", {
       opacity: 0,
-      clipPath: "polygon(0 0, 0% 0, 0 100%, 0% 100%)",
+      x: -100,
+      y: 100,
     })
 
     const cards = gsap.utils.toArray(".animProjectCard")
     cards.forEach(card => {
       gsap.to(card, {
         opacity: 1,
-        clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0% 100%)",
+        x: 0,
+        y: 0,
         scrollTrigger: {
           trigger: card,
           scrub: 1,
