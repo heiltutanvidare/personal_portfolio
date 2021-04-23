@@ -16,19 +16,17 @@ export default function Project({ data }) {
 
     gsap.set(".animProjectCard", {
       opacity: 0,
-      x: -40,
-      y: 40,
+      y: 150,
     })
 
     const cards = gsap.utils.toArray(".animProjectCard")
     cards.forEach(card => {
       gsap.to(card, {
         opacity: 1,
-        x: 0,
         y: 0,
         scrollTrigger: {
           trigger: card,
-          scrub: 1,
+          scrub: 0.5,
           toggleActions: "restart pause reverse pause",
           start: "top bottom",
           end: "top center",
