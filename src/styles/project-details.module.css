@@ -5,8 +5,7 @@
 }
 
 .details p {
-  margin-bottom: 1.25em;
-  line-height: 2;
+  margin-bottom: 1.75em;
 }
 
 .content p:first-of-type::first-letter {
