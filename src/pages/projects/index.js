@@ -83,7 +83,7 @@ export default function Project({ data }) {
 
 export const query = graphql`
   {
-    allStrapiProject(sort: { fields: strapiId, order: ASC }) {
+    allStrapiProject(sort: { fields: strapiId, order: DESC }) {
       nodes {
         cover {
           childImageSharp {
