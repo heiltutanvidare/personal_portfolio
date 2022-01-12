@@ -32,12 +32,10 @@
     grid-column-gap: 2em;
   }
 
-  .timeframe {
-    justify-self: end;
-  }
-
-  .school,
+  .timeframe,
+  .school, 
   .company {
     justify-self: end;
+    text-align: right;
   }
 }
