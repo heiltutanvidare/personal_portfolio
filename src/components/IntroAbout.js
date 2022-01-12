@@ -9,9 +9,9 @@ export default function IntroAbout() {
     <section className={introAbout}>
       <h2>Om meg</h2>
       <p>
-        Eg er ein redaksjonell designar og frontend-utviklar – som etter 12 år i
-        papiravisbransjen – tok steget over i den digitale verda, med mål om å
-        ein dag kunne få jobbe med digital historieforteljing
+        Designer med over 12 års erfaring i mediebransjen
+        avisbransjen. Utdanna mediegrafikar og frontend-utviklar – Med mål om å
+        kunne få jobbe med digital design og utvikling.
       </p>
       <AniLink
         paintDrip
