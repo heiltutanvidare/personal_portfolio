@@ -179,15 +179,14 @@ function Bio() {
             teknologi i resten av mitt yrkesaktive liv.
           </p>
           <p>
-            Eg bur saman med kjærasten min – Mona – og til hausten skal me to
-            bli til tre. Noko me gler oss svært mykje til{" "}
+            Eg bur saman med kjærasten min Mona, og dotter vår Elvira, som kom til verda hausten 2021. {" "}
             <span role="img" aria-label="baby emoji">
               👶🏻
             </span>
           </p>
           <p>
-            Eg er for tida aktiv jobbsøkjar og tar{" "}
-            <Link to="/contact">svært gjerne ein prat.</Link>
+            Eg tar svært gjerne ein {" "}
+            <Link to="/contact">uforpliktande prat.</Link>
           </p>
         </div>
       </div>
