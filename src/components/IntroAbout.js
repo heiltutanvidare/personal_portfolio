@@ -9,8 +9,7 @@ export default function IntroAbout() {
     <section className={introAbout}>
       <h2>Om meg</h2>
       <p>
-        Designer med over 12 års erfaring i mediebransjen
-        avisbransjen. Utdanna mediegrafikar og frontend-utviklar – Med mål om å
+        Designer med over 12 års erfaring i mediebransjen. Utdanna mediegrafikar og frontend-utviklar – Med mål om å
         kunne få jobbe med digital design og utvikling.
       </p>
       <AniLink
